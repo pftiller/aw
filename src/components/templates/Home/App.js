@@ -7,12 +7,12 @@ import { Books } from './Books';
 import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
 
-import { setWidth } from '../../../reducer/api';
+import { setWidth, setCondition } from '../../../reducer/api';
 import '../../../css/styles.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {width: this.props.width, condition: null};
+        this.state = {width: this.props.width, condition: this.props.condition};
         this.fetchWidth=this.fetchWidth.bind(this);
         this.toggleHamburger=this.toggleHamburger.bind(this);
       }
@@ -20,9 +20,11 @@ class App extends Component {
         if(!this.props.width) {
             this.props.updateWidth(window.innerWidth);
             if(window.innerWidth > 670) {
+                this.props.updateCondition("open");
                 this.setState({condition: "open"});
             }
             else {
+                this.props.updateCondition("closed");
                 this.setState({condition: "closed"});
             }
         }   
@@ -71,8 +73,10 @@ class App extends Component {
 export default connect(
     ({ app }) => ({
         width: app.width,
+        condition: app.condition
     }),
     dispatch => ({
         updateWidth: (widthDOM) => dispatch(setWidth(widthDOM)),
+        updateCondition: (currentCondition) => dispatch(setCondition(currentCondition)),
     })
 )(App);
