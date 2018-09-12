@@ -9,13 +9,24 @@
     <title>ArtWrite Productions</title>
 </head>
 <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
+    <noscript id="deferred-styles">
+      <style class="_styletron_hydrate_"></style>
     </noscript>
     <div id="root"></div>
 
     <script type="text/javascript" charset="utf-8">
         window.PAGE_STATE = "__SERVER_PAGE_STATE__";
+        var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
     </script>
 
     <!--
@@ -28,6 +39,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <style class="_styletron_hydrate_"></style>
+
+    
   </body>
 </html>
