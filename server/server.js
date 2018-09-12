@@ -2,7 +2,7 @@ import express from 'express';
 import Loadable from 'react-loadable';
 import indexController from './controllers/index';
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
