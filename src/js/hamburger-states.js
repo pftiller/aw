@@ -1,6 +1,3 @@
-let close = './images/svgs/close.svg';
-let hamburger = './images/svgs/hamburger.svg';
-
    let open = 
       {
         src: './images/svgs/close.svg',

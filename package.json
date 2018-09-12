@@ -32,7 +32,7 @@
     "start": "npm-run-all -p serve watch-css start-js",
     "build": "npm-run-all build-css build-js",
     "start-js": "react-scripts start",
-    "serve": "node --inspect ssr-init",
+    "serve": "NODE_ENV=production BABEL_ENV=production node --inspect server/bootstrap.js node --inspect server/bootstrap.js",
     "build-js": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

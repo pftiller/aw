@@ -18,7 +18,7 @@ export class Header extends React.Component {
         return(
             <header>
                 <img src='./images/artwrite-logo.png' alt="ArtWrite Productions Logo" className="logo"/>
-                {/* <img src={hamburgerStates[this.props.condition].src} className={hamburgerStates[this.props.condition].className} alt={hamburgerStates[this.props.condition].alt} onClick={() => toggleHamburger()}/> */}
+                <img src={hamburgerStates[this.props.condition].src} className={hamburgerStates[this.props.condition].className} alt={hamburgerStates[this.props.condition].alt} onClick={() => toggleHamburger()}/>
                 <Nav condition={this.state.condition}/>
             </header>
         )

@@ -8,7 +8,7 @@ import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
 
 import { setWidth } from '../../../reducer/api';
-
+import '../../../css/styles.css';
 class App extends Component {
     constructor(props) {
         super(props);
