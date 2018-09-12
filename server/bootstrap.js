@@ -1,3 +1,4 @@
+require('@google-cloud/debug-agent').start();
 require('dotenv').config();
 require('ignore-styles');
 require('url-loader');
