@@ -6,9 +6,17 @@ import {About} from './About';
 import { Books } from './Books';
 import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
-
 import { setWidth, setCondition } from '../../../reducer/api';
 import '../../../css/styles.css';
+
+
+
+
+
+
+
+
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -54,15 +62,37 @@ class App extends Component {
     window.addEventListener("resize", this.fetchWidth); 
   }
     render() {
+        let green = '/images/green.png';
+        let carousel = {
+            background: `url(${green}) bottom / 107% calc(152% - ${this.props.width}px) no-repeat`
+        }
+        let orange = './images/orange.png';
+        let about = {
+            background: `url(${orange}) center center / 100% calc(135% - ${this.props.width}px) no-repeat`
+        }
+        let pink = '/images/pink.png';
+        let books = {
+            background: `url(${pink}) center center / 100% calc(125% - ${this.props.width}px) no-repeat`
+        }    
+        let purple = './images/purple.png';
+        let reviews = {
+            background: `url(${purple}) center center / 105% calc(155% - ${this.props.width}px) no-repeat`   
+        }
+
+
+
+
+
+
         return (
             <div>
                 <div className="App-intro">
                     <Header toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
                     <main>
-                        <Carousel/>
-                        <About/>
-                        <Books/>
-                        <ReviewCycler/>
+                        <Carousel style={carousel}/>
+                        <About style={about}/>
+                        <Books style={books}/>
+                        <ReviewCycler style={reviews}/>
                         <Footer/>
                     </main>
                 </div>

@@ -1,13 +1,10 @@
 import React from 'react';
 
-let pink = '/images/pink.png';
-let styles = {
-    background: `url(${pink}) center center / 100% 1450px no-repeat`
-}
+
 export class Books extends React.Component {
     render(){
         return(
-            <div id="books" style={styles}>
+            <div id="books" style={this.props.style}>
                 <h2 className="pink">Our Books</h2>
                 <div className="book-details">
                     <h4 className="book-title">Sammy's Day at the Fair: The Digestive System</h4>

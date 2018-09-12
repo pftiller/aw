@@ -36,9 +36,14 @@ h3 {
 }
 h4 {
   font-size:16px;
+  -webkit-margin-after: 0;
+  margin-bottom:5px;
+
 }
 h5 {
   font-size:15px;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
 }
 .float-right {
   float:right;
@@ -104,7 +109,7 @@ nav > ul {
 }
 nav li {
   font-family: 'Baloo Bhai', cursive;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   width: 50%;
   margin: 0;
   height: 75px;
@@ -171,6 +176,7 @@ nav a:visited {
 */
 #home {
   padding-bottom: 35px;
+  position: relative;
 }
 .carousel p {
   margin-bottom: 10px;
@@ -195,6 +201,9 @@ nav a:visited {
     width: 70%;
     margin:0 auto;
 }
+.caption h3 {
+  white-space: nowrap;
+}
 .caption h3,
 .caption p {
     color:#fff;
@@ -216,11 +225,11 @@ nav a:visited {
 }
 
 .left-arrow {
-  left:25px;
+  left:35px;
   bottom: 85px;
 }
 .right-arrow {
-  right:25px;
+  right:35px;
   bottom: 85px;
 }
 /*
@@ -256,7 +265,7 @@ nav a:visited {
 .book-covers {
   height:270px;
   margin-bottom:20px;
-  margin-top:15px;
+  margin-left: 10px;
 }
 .cover {
   width:180px;
@@ -455,6 +464,7 @@ footer {
     width: 25%;
     height: 50px;
     padding-top: 12px;
+    font-size: 1.5rem;
   }
   #home,
   #about,

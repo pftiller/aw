@@ -1,10 +1,6 @@
 import React from 'react';
 import {Reviews} from './Reviews';
 
-let purple = './images/purple.png';
-let styles = {
-    background: `url(${purple}) center center / 105% 575px no-repeat`
-}
 export class ReviewCycler extends React.Component {
     constructor(props) {
         super(props);
@@ -27,7 +23,7 @@ export class ReviewCycler extends React.Component {
       }
     render() {       
         return (
-            <div id="reviews" style={styles}>
+            <div id="reviews" style={this.props.style}>
                     <h2 className="purple">Reviews</h2>
                     <img src="./images/sammy-cover.jpg" className="sammy-cover" alt=""/>
                         <Reviews index={this.state.index}/>
