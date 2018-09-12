@@ -15,12 +15,23 @@ export class Header extends React.Component {
       }
     render() {
         let toggleHamburger = this.props.toggleHamburger;
-        return(
-            <header>
-                <img src='./images/artwrite-logo.png' alt="ArtWrite Productions Logo" className="logo"/>
-                <img src={hamburgerStates[this.props.condition].src} className={hamburgerStates[this.props.condition].className} alt={hamburgerStates[this.props.condition].alt} onClick={() => toggleHamburger()}/>
-                <Nav condition={this.state.condition}/>
-            </header>
-        )
+        if(this.state.condition === "open") {
+            return(
+                <header>
+                    <img src='./images/artwrite-logo.png' alt="ArtWrite Productions Logo" className="logo"/>
+                    <img src={hamburgerStates.open.src} className={hamburgerStates.open.className} alt={hamburgerStates.open.alt} onClick={() => toggleHamburger()}/>
+                    <Nav condition={this.state.condition}/>
+                </header>
+            )
+        }
+        else {
+            return(
+                <header>
+                    <img src='./images/artwrite-logo.png' alt="ArtWrite Productions Logo" className="logo"/>
+                    <img src={hamburgerStates.closed.src} className={hamburgerStates.closed.className} alt={hamburgerStates.closed.alt} onClick={() => toggleHamburger()}/>
+                    <Nav condition={this.state.condition}/>
+                </header>
+            )
+        }
     }
 }
