@@ -64,19 +64,19 @@ class App extends Component {
     render() {
         let green = '/images/green.png';
         let carousel = {
-            background: `url(${green}) bottom / 107% calc(265% - ${this.props.width}px) no-repeat`
+            background: `url(${green}) bottom / 107% calc(155% - ${this.props.width}px) no-repeat`
         }
         let orange = './images/orange.png';
         let about = {
-            background: `url(${orange}) center center / 100% calc(235% - ${this.props.width}px) no-repeat`
+            background: `url(${orange}) center center / 100% calc(140% - ${this.props.width}px) no-repeat`
         }
         let pink = '/images/pink.png';
         let books = {
-            background: `url(${pink}) center center / 100% calc(217% - ${this.props.width}px) no-repeat`
+            background: `url(${pink}) center center / 100% calc(125% - ${this.props.width}px) no-repeat`
         }    
         let purple = './images/purple.png';
         let reviews = {
-            background: `url(${purple}) center center / 105% calc(269% - ${this.props.width}px) no-repeat`   
+            background: `url(${purple}) center center / 105% calc(150% - ${this.props.width}px) no-repeat`   
         }
 
         return (
