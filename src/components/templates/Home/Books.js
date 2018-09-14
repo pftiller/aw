@@ -20,13 +20,13 @@ export class Books extends React.Component {
                 <div className="synopsis">
                     <p><em>Sammy's Day at the Fair: The Digestive System</em> introduces middle readers to the human digestive system by blending a humorous story about a boy's eating adventures at a fair with an introductory lesson in biology and anatomy. Many <a href="/#reviews">nationally-recognized science and health teachers</a> have endorsed the accuracy of the information in the book, but they also like the creative and humorous way the technical information is presented. Besides providing an introductory lesson on the digestive organs and their functions, the book also explains the technical basis behind all those digestion-related reactions that kids (and adults) find so funny.This gut-reaction feature and the humorous story-line helps make learning science fun. Finally, to assist in the campaign against childhood obesity, the book carries a healthy-living message that promotes good nutrition and exercise.</p>
                     <div className="quote-snippets">
-                        <img src='./images/svgs/start-quotes.svg' alt="Beginning Quotes" className="quote-marks for-books"/>
+                        <img src='./images/svgs/start-quotes.svg' alt="Beginning Quotes" className="quote-marks opening for-books"/>
                         <p className="quote-books"><i>...Straightforward information on the digestive system at an intermediate level...deftly illustrated...as instructional and educational as it is enjoyable and reader engaging.</i></p>
-                        <img src='./images/svgs/end-quotes.svg' alt="Closing Quotes" className="quote-marks for-books"/>
+                        <img src='./images/svgs/end-quotes.svg' alt="Closing Quotes" className="quote-marks closing for-books"/>
                         <p className="quote-source"><strong><i>- Midwest Book Review - Children's Bookwatch</i></strong></p>
-                        <img src='./images/svgs/start-quotes.svg' alt="Beginning Quotes" className="quote-marks for-books"/>
+                        <img src='./images/svgs/start-quotes.svg' alt="Beginning Quotes" className="quote-marks opening for-books"/>
                         <p className="quote-books"><i>Teachers are always looking for picture books that connect with curriculum. I think they would find this book very useful and appealing. It is well written, the pictures support the text and add interest and appeal, and it is timely given all the recent things said and written about the childhood obesity epidemic.</i></p>
-                        <img src='./images/svgs/end-quotes.svg' alt="Closing Quotes" className="quote-marks for-books"/>
+                        <img src='./images/svgs/end-quotes.svg' alt="Closing Quotes" className="quote-marks closing for-books"/>
                         <p className="quote-source"><strong><i>- Barbara Geiger, President, Learning Explorations</i></strong></p>
                         </div>
                 </div>

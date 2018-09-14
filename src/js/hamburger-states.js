@@ -1,13 +1,13 @@
    let open = 
       {
         src: './images/svgs/close.svg',
-        className: "hamburger-icon",
+        className: "close-icon",
         alt: "Hamburger Icon",
       }
    let closed =
       {
         src: './images/svgs/hamburger.svg',
-        className: "close-icon",
+        className: "hamburger-icon",
         alt: "Close Icon"
       }
 
