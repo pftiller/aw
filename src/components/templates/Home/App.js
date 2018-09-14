@@ -70,7 +70,7 @@ class App extends Component {
         let about;
         let books;
         let reviews;
-        if(window.devicePixelRatio > 1 || this.props.width < 670)  {
+        if(window.devicePixelRatio > 1 && this.props.width < 670)  {
              carousel = {
                 background: `url(${green}) bottom / 107% calc(155% - ${this.props.width}px) no-repeat`
             }
@@ -84,7 +84,7 @@ class App extends Component {
                 background: `url(${purple}) center center / 105% calc(150% - ${this.props.width}px) no-repeat`   
             }
         }
-        else if(window.devicePixelRatio > 1 || this.props.width > 670) {
+        else if(window.devicePixelRatio > 1 && this.props.width > 670) {
             carousel = {
                 background: `url(${green}) bottom / 107% calc(155% - ${this.props.width}px) no-repeat`
             }
