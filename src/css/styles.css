@@ -245,6 +245,7 @@ nav a:active,nav a:visited{
     width:180px;
     height:auto;
     float:left;
+    margin-top: 25px;
     margin-left:7.5px;
     -webkit-box-shadow:0 10px 25px -5px rgba(2,2,2,.8);
     box-shadow:0 10px 25px -5px rgba(2,2,2,.8)
@@ -254,13 +255,14 @@ nav a:active,nav a:visited{
     text-align:center;
     font-size:18px;
     width:35%;
-    margin:25% 10px 0;
+    margin:35% 10px 0;
     font-family:Lobster,cursive;
     background:#5aad5a;
     border:2px solid #0b6623;
     border-radius:10px;
     padding:2.5px 8px;
-    float:right
+    float:right;
+    text-decoration: none;
 }
 .buy-now:hover{
     cursor:pointer;
@@ -271,7 +273,7 @@ nav a:active,nav a:visited{
     text-decoration:none
 }
 .synopsis{
-    margin-top:45px
+    margin-top: 35px;
 }
 .quote-snippets{
     margin-top:35px

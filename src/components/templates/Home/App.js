@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Header} from './Header';
+import {HeaderContents} from './Header';
+import {Nav} from './Nav';
 import {Carousel} from './Carousel';
 import {About} from './About';
 import { Books } from './Books';
@@ -59,7 +60,10 @@ class App extends Component {
         return (
             <div>
                 <div className="App-intro">
-                    <Header toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
+                    <header>
+                        <HeaderContents toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
+                        <Nav toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
+                    </header>
                     <main>
                         <Carousel />
                         <About />
