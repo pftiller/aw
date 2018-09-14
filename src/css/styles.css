@@ -130,7 +130,8 @@ nav li:last-child:hover{
     cursor:pointer
 }
 nav a{
-    padding-top:15px
+    padding: 32.5px 65px;
+
 }
 nav a,nav a:hover{
     color:#fff;
@@ -425,10 +426,13 @@ footer{
         visibility:collapse
     }
     nav li{
-        width:25%;
-        height:50px;
-        padding-top:12px;
-        font-size:1.5rem
+        width: 25%;
+        height: 40px;
+        padding-top: 3px;
+        font-size: 1.25rem;
+    }
+    nav a {
+        padding: 5px 95px;
     }
     #about,#books,#home,#reviews{
         width:70%;

@@ -6,7 +6,7 @@ import {About} from './About';
 import { Books } from './Books';
 import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
-import { setWidth, setCondition } from '../../../reducer/api';
+import { setWidth, setCondition, setPixelRatio } from '../../../reducer/api';
 import '../../../css/styles.css';
 
 
@@ -20,13 +20,14 @@ import '../../../css/styles.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {width: this.props.width, condition: this.props.condition};
+        this.state = {width: this.props.width, condition: this.props.condition, pixelRatio: this.props.pixelRatio};
         this.fetchWidth=this.fetchWidth.bind(this);
         this.toggleHamburger=this.toggleHamburger.bind(this);
       }
     componentWillMount() {
         if(!this.props.width) {
-            this.props.updateWidth(window.innerWidth);
+            this.props.updateWidth(window.innerWidth)
+            this.props.updatePixelRatio(window.devicePixelRatio);
             if(window.innerWidth > 670) {
                 this.props.updateCondition("open");
                 this.setState({condition: "open"});
@@ -37,11 +38,13 @@ class App extends Component {
             }
         }   
         this.setState({width: this.props.width})
+        this.setState({pixelRatio: this.props.pixelRatio})
     }
     componentDidMount() {
         window.addEventListener("resize", this.fetchWidth); 
 }
   fetchWidth() {
+    this.setState({pixelRatio: window.devicePixelRatio})
     this.setState({width: window.innerWidth});
     if(window.innerWidth > 670) {
         this.setState({condition: "open"});
@@ -70,26 +73,12 @@ class App extends Component {
         let about;
         let books;
         let reviews;
-        if(window.devicePixelRatio > 1 && this.props.width < 670)  {
-             carousel = {
-                background: `url(${green}) bottom / 107% calc(155% - ${this.props.width}px) no-repeat`
-            }
-             about = {
-                background: `url(${orange}) center center / 100% calc(140% - ${this.props.width}px) no-repeat`
-            }
-             books = {
-                background: `url(${pink}) center center / 100% calc(125% - ${this.props.width}px) no-repeat`
-            }    
-             reviews = {
-                background: `url(${purple}) center center / 105% calc(150% - ${this.props.width}px) no-repeat`   
-            }
-        }
-        else if((window.devicePixelRatio > 1 && this.props.width > 670) || (window.devicePixelRatio === 1 && this.props.width < 670))  {
+        if((this.props.pixelRatio > 1 ) || (this.props.pixelRatio === 1 && this.props.width < 670))  {
             carousel = {
-                background: `url(${green}) bottom / 107% calc(155% - ${this.props.width}px) no-repeat`
+                background: `url(${green}) bottom / 107% calc(150% - ${this.props.width}px) no-repeat`
             }
              about = {
-                background: `url(${orange}) center center / 100% calc(140% - ${this.props.width}px) no-repeat`
+                background: `url(${orange}) center center / 100% calc(135% - ${this.props.width}px) no-repeat`
             }
              books = {
                 background: `url(${pink}) center center / 100% calc(125% - ${this.props.width}px) no-repeat`
@@ -131,10 +120,12 @@ class App extends Component {
 export default connect(
     ({ app }) => ({
         width: app.width,
-        condition: app.condition
+        condition: app.condition,
+        pixelRatio: app.pixelRatio
     }),
     dispatch => ({
         updateWidth: (widthDOM) => dispatch(setWidth(widthDOM)),
         updateCondition: (currentCondition) => dispatch(setCondition(currentCondition)),
+        updatePixelRatio: (currentPixelRatio) => dispatch(setPixelRatio(currentPixelRatio))
     })
 )(App);
