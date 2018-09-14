@@ -98,20 +98,34 @@ class App extends Component {
                 background: `url(${purple}) center center / 105% calc(150% - ${this.props.width}px) no-repeat`   
             }
         }
-        else {
+        else if (window.devicePixelRatio < 2 && this.props.width < 670) {
              carousel = {
-                background: `url(${green}) bottom / 107% calc(165% - ${this.props.width}px) no-repeat`
+                background: `url(${green}) bottom / 107% calc(215% - ${this.props.width}px) no-repeat`
             }
              about = {
-                background: `url(${orange}) center center / 100% calc(155% - ${this.props.width}px) no-repeat`
+                background: `url(${orange}) center center / 100% calc(175% - ${this.props.width}px) no-repeat`
             }
              books = {
-                background: `url(${pink}) center center / 100% calc(135% - ${this.props.width}px) no-repeat`
+                background: `url(${pink}) center center / 100% calc(150% - ${this.props.width}px) no-repeat`
             }    
              reviews = {
-                background: `url(${purple}) center center / 105% calc(155% - ${this.props.width}px) no-repeat`   
+                background: `url(${purple}) center center / 105% calc(220% - ${this.props.width}px) no-repeat`   
             }
         }
+        else {
+            carousel = {
+               background: `url(${green}) bottom / 107% calc(220% - ${this.props.width}px) no-repeat`
+           }
+            about = {
+               background: `url(${orange}) center center / 100% calc(200% - ${this.props.width}px) no-repeat`
+           }
+            books = {
+               background: `url(${pink}) center center / 100% calc(175% - ${this.props.width}px) no-repeat`
+           }    
+            reviews = {
+               background: `url(${purple}) center center / 105% calc(225% - ${this.props.width}px) no-repeat`   
+           }
+       }
         return (
             <div>
                 <div className="App-intro">
