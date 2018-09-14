@@ -1,6 +1,15 @@
 import React from 'react';
 
 export class Nav extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {condition: this.props.condition, width: this.props.width};
+      }
+      componentWillReceiveProps(nextProps) {
+        if (nextProps.width !== this.state.width) {
+          this.setState({ condition: nextProps.condition });
+        }
+      }
     render() {
         let toggleHamburger = this.props.toggleHamburger;
         if(this.props.width < 670)
