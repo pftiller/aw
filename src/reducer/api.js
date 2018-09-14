@@ -15,11 +15,6 @@ export const api = (state = initialState, action) => {
         return {
             ...state,
             condition: action.condition
-        }
-        case 'SET_PIXEL_RATIO':
-        return {
-            ...state,
-            pixelRatio: action.pixelRatio
         };
 		default:
 			return state;
@@ -27,8 +22,6 @@ export const api = (state = initialState, action) => {
 };
 export const setWidth = widthDOM => ({ type: 'SET_WIDTH', width: widthDOM });
 export const setCondition = currentCondition => ({ type: 'SET_CONDITION', condition: currentCondition });
-export const setPixelRatio = currentPixelRatio => ({ type: 'SET_PIXEL_RATIO', pixelRatio: currentPixelRatio });
-
 export const setAsyncWidth = widthDOM => dispatch => (
     new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 2000);
@@ -40,10 +33,4 @@ export const setAsyncCondition = currentCondition => dispatch => (
         setTimeout(() => resolve(), 2000);
     })
         .then(() => dispatch(setCondition(currentCondition)))
-);
-export const setAsyncPixelRatio = currentPixelRatio => dispatch => (
-    new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), 2000);
-    })
-        .then(() => dispatch(setPixelRatio(currentPixelRatio)))
 );

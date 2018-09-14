@@ -436,7 +436,7 @@ footer{
     header{
         position:relative
     }
-    .hamburger-icon{
+    .hamburger-icon, .close-icon {
         visibility:collapse
     }
     nav li{

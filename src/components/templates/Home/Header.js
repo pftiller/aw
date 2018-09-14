@@ -8,7 +8,6 @@ export class Header extends React.Component {
         this.state = {condition: this.props.condition};
       }
     componentWillReceiveProps(nextProps) {
-        // You don't have to do this check first, but it can help prevent an unneeded render
         if (nextProps.condition !== this.state.condition) {
           this.setState({ condition: nextProps.condition });
         }
