@@ -63,7 +63,7 @@ header{
     height:auto;
     margin:0 auto;
     padding:15px;
-    max-width:170px
+    max-width:140px
 }
 .close-icon,.hamburger-icon{
     z-index:2;
@@ -446,7 +446,7 @@ footer{
         font-size: 1.25rem;
     }
     nav a {
-        padding: 5px 95px;
+        padding: 5px 25%;
     }
     #about,#books,#home,#reviews{
         width:70%;
