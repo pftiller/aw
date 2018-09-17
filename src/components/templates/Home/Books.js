@@ -13,8 +13,8 @@ export class Books extends React.Component {
                     <h4 className="book-title">Sammy's Day at the Fair: The Digestive System</h4>
                     <h5><i>Featuring Gut Feelings and Reactions</i></h5>
                     <p>By Jerome Tiller - Illustrated by Paul Tiller</p>
-                    <p className="inline left">ISBN: 1-59298-046-5</p>
-                    <p className="inline right">Price: $15.95</p>
+                    <p className="inline left">ISBN: 978-0977769391</p>
+                    <p className="inline right">Price: $17.95</p>
                 </div>    
                 <div className="book-covers">
                     <img src="./images/sammy-cover.jpg" className="cover" alt="Sammy's Day at the Fair - Available Now!" />
