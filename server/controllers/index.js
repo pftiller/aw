@@ -9,12 +9,17 @@ const path = require("path");
 
 
 const actionIndex = (req, res, next) => {
-    const store = configureStore();
+    if (req.host != 'localhost' && req.get('X-Forwarded-Proto') == 'http') {
+        res.redirect(`https://${req.host}${req.url}`);
+        const store = configureStore();
 
-    store.dispatch(setAsyncWidth(400))
-        .then(() => {
-            serverRenderer(store)(req, res, next);
-        });
+        store.dispatch(setAsyncWidth(400))
+            .then(() => {
+                serverRenderer(store)(req, res, next);
+            });
+        return;
+      }
+   
 };
 
 // other static resources should just be served as they are
