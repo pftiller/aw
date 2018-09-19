@@ -9,7 +9,7 @@ import ReduxThunk from 'redux-thunk'
 
 import { api } from '../reducer/api';
 
-// if you're also using redux-thunk, add it as a middleware
+// // if you're also using redux-thunk, add it as a middleware
 const createStoreWithMiddleware = compose(applyMiddleware(ReduxThunk))(createStore);
 
 const rootReducer = combineReducers({

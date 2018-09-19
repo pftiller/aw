@@ -41,7 +41,7 @@ export default (store) => (req, res, next) => {
                    <Router location={req.baseUrl} context={context}>
 						<App />
 					</Router>
-                </Provider>
+               </Provider> 
             </Loadable.Capture>
         );
 

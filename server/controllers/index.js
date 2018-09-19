@@ -9,25 +9,27 @@ const path = require("path");
 
 
 const actionIndex = (req, res, next) => {
-    if (req.host != 'localhost' && req.get('X-Forwarded-Proto') == 'http') {
-        res.redirect(`https://${req.host}${req.url}`);
         const store = configureStore();
 
         store.dispatch(setAsyncWidth(400))
             .then(() => {
                 serverRenderer(store)(req, res, next);
             });
-        return;
-      }
-   
 };
 
-// other static resources should just be served as they are
-app.use('/static', express.static('build'));
 
-// root (/) should always serve our server rendered page
-router.use('^/$', actionIndex);
-
+app.configure('production', function () {
+    app.use (function (req, res, next) {
+      var schema = (req.headers['x-forwarded-proto'] || '').toLowerCase();
+      if (schema === 'https') {
+        next();
+      } else {
+        res.redirect('https://' + req.headers.host + req.url);
+      }
+    });
+  });
+  app.use('/static', express.static('build'));
+  router.use('^/$', actionIndex);
 
 
 
