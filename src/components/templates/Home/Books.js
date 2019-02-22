@@ -18,7 +18,8 @@ export class Books extends React.Component {
                 </div>    
                 <div className="book-covers">
                     <img src="./images/sammy-cover.jpg" className="cover" alt="Sammy's Day at the Fair - Available Now!" />
-                    <a href="https://www.amazon.com/gp/offer-listing/0977769399" target="_blank" rel="noopener noreferrer" className="buy-now">Buy Now</a>
+                    <a href="https://www.amazon.com/gp/offer-listing/0977769399" target="_blank" rel="noopener noreferrer" className="buy-now">Hardcover</a>
+                    <a href="https://itunes.apple.com/us/book/sammys-day-at-the-fair/id1451766202?mt=11" target="_blank" rel="noopener noreferrer" className="buy-now">Ebook</a>
                 </div>
                 <div className="synopsis">
                     <p><em>Sammy's Day at the Fair: The Digestive System</em> introduces middle readers to the human digestive system by blending a humorous story about a boy's eating adventures at a fair with an introductory lesson in biology and anatomy. Many <a href="/#reviews">nationally-recognized science and health teachers</a> have endorsed the accuracy of the information in the book, but they also like the creative and humorous way the technical information is presented. Besides providing an introductory lesson on the digestive organs and their functions, the book also explains the technical basis behind all those digestion-related reactions that kids (and adults) find so funny.This gut-reaction feature and the humorous story-line helps make learning science fun. Finally, to assist in the campaign against childhood obesity, the book carries a healthy-living message that promotes good nutrition and exercise.</p>
