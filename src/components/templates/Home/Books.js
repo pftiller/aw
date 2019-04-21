@@ -18,7 +18,7 @@ export class Books extends React.Component {
                 </div>    
                 <div className="book-covers">
                     <img src="./images/sammy-cover.jpg" className="cover" alt="Sammy's Day at the Fair - Available Now!" />
-                    <a href="https://www.amazon.com/gp/offer-listing/0977769399" target="_blank" rel="noopener noreferrer" className="buy-now">Hardcover</a>
+                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring/dp/0977769399/ref=sr_1_1?qid=1555778429&refinements=p_27%3AJerome+Tiller&s=books&sr=1-1&text=Jerome+Tiller" target="_blank" rel="noopener noreferrer" className="buy-now">Hardcover</a>
                     <a href="https://itunes.apple.com/us/book/sammys-day-at-the-fair/id1451766202?mt=11" target="_blank" rel="noopener noreferrer" className="buy-now">Ebook</a>
                 </div>
                 <div className="synopsis">

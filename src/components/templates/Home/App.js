@@ -8,6 +8,7 @@ import { Books } from './Books';
 import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
 import { setWidth, setCondition} from '../../../reducer/api';
+import '../../../js/scroll';
 import '../../../css/styles.css';
 
 
@@ -32,10 +33,12 @@ class App extends Component {
         }   
         this.setState({width: this.props.width})
         this.setState({pixelRatio: this.props.pixelRatio})
+
     }
     componentDidMount() {
-        window.addEventListener("resize", this.fetchWidth); 
-}
+        window.addEventListener("resize", this.fetchWidth);
+        window.addEventListener("scroll", this.hasScrolled);
+    }
   fetchWidth() {
     this.setState({width: window.innerWidth});
     if(window.innerWidth > 670) {
@@ -60,7 +63,7 @@ class App extends Component {
         return (
             <div>
                 <div className="App-intro">
-                    <header>
+                    <header class="header-down">
                         <HeaderContents toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
                         <Nav toggleHamburger={this.toggleHamburger} condition={this.state.condition} width={this.state.width}/>
                     </header>

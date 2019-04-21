@@ -1,14 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+Bhai|Karla:400,400i,700|Lobster);
 body{
     margin:0;
-    padding:0;
+    /* padding-top:53.50%; */
     font-family:sans-serif;
     line-height:2;
     position:relative
 }
 main{
     font-family:Karla,sans-serif;
-    margin-top:100px
+    margin-top: 25px;
 }
 p{
     -webkit-margin-before:0;
@@ -52,9 +52,10 @@ h5{
 }
 header{
     background-color:#e3e1e3;
-    position:fixed;
+    position: relative;;
     top:0;
     width:100%;
+    transition: top 0.2s ease-in-out;
     z-index:100
 }
 .logo{
@@ -64,6 +65,9 @@ header{
     margin:0 auto;
     padding:15px;
     max-width:140px
+}
+.header-up {
+    top: -53.50%;
 }
 .close-icon,.hamburger-icon{
     z-index:2;
@@ -89,7 +93,7 @@ nav{
     -ms-flex-line-pack:center;
     align-content:center;
     text-align:center;
-    clear:both
+    clear:both;
 }
 nav>ul{
     margin:10px auto;
@@ -251,17 +255,17 @@ nav a:active,nav a:visited{
     box-shadow:0 10px 25px -5px rgba(2,2,2,.8)
 }
 .buy-now{
-    color:#fff;
-    text-align:center;
-    font-size:18px;
-    width:35%;
-    margin:35% 10px 0;
-    font-family:Lobster,cursive;
-    background:#5aad5a;
-    border:2px solid #0b6623;
-    border-radius:10px;
-    padding:2.5px 8px;
-    float:right;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    width: 30%;
+    margin: 5% 0 0 3.5%;
+    font-family: Lobster,cursive;
+    background: #5aad5a;
+    border: 2px solid #0b6623;
+    border-radius: 10px;
+    padding: 2.5px 8px;
+    float: left;
     text-decoration: none;
 }
 .buy-now:hover{
@@ -271,6 +275,9 @@ nav a:active,nav a:visited{
 .buy-now:active,.buy-now:hover,.buy-now:visited{
     color:#fff;
     text-decoration:none
+}
+.buy-now:nth-of-type(1) {
+    margin-top:25%;
 }
 .synopsis{
     margin-top: 35px;
@@ -419,6 +426,7 @@ footer{
     }
     .buy-now{
         width:90%;
+        margin: 15% 10px 0;
         margin-left:auto;
         margin-right:auto
     }
@@ -433,10 +441,10 @@ footer{
 }
 @media screen and (min-width:670px){
     main{
-        margin-top:50px
+        margin-top: 50px;
     }
     header{
-        position:relative
+        position: relative;;
     }
     .hamburger-icon, .close-icon {
         visibility:collapse
