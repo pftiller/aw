@@ -13,14 +13,20 @@ export class Books extends React.Component {
                     <h4 className="book-title">Sammy's Day at the Fair: The Digestive System</h4>
                     <h5><i>Featuring Gut Feelings and Reactions</i></h5>
                     <p>By Jerome Tiller - Illustrated by Paul Tiller</p>
-                    <p className="inline left">ISBN: 978-0977769391</p>
-                    <p className="inline right">Price: $17.95</p>
-                </div>    
+                </div>
                 <div className="book-covers">
                     <img src="./images/sammy-cover.jpg" className="cover" alt="Sammy's Day at the Fair - Available Now!" />
-                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring/dp/0977769399/ref=sr_1_1?qid=1555778429&refinements=p_27%3AJerome+Tiller&s=books&sr=1-1&text=Jerome+Tiller" target="_blank" rel="noopener noreferrer" className="buy-now">Hardcover</a>
-                    <a href="https://itunes.apple.com/us/book/sammys-day-at-the-fair/id1451766202?mt=11" target="_blank" rel="noopener noreferrer" className="buy-now">Ebook</a>
                 </div>
+                <div className="purchase-links">
+                    <p className="inline isbn">ISBN: 978-0977769391</p>
+                    <p className="inline price">Price: $17.95</p>
+                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring/dp/0977769399/ref=sr_1_1?qid=1555778429&refinements=p_27%3AJerome+Tiller&s=books&sr=1-1&text=Jerome+Tiller" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Softcover</a>
+                    <br/>
+                    <p className="inline isbn">ISBN: 978-0977769308</p>
+                    <p className="inline price">Price: $3.99</p>
+                    <a href="https://itunes.apple.com/us/book/sammys-day-at-the-fair/id1451766202?mt=11" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Ebook</a>
+                </div>    
+
                 <div className="synopsis">
                     <p><em>Sammy's Day at the Fair: The Digestive System</em> introduces middle readers to the human digestive system by blending a humorous story about a boy's eating adventures at a fair with an introductory lesson in biology and anatomy. Many <a href="/#reviews">nationally-recognized science and health teachers</a> have endorsed the accuracy of the information in the book, but they also like the creative and humorous way the technical information is presented. Besides providing an introductory lesson on the digestive organs and their functions, the book also explains the technical basis behind all those digestion-related reactions that kids (and adults) find so funny.This gut-reaction feature and the humorous story-line helps make learning science fun. Finally, to assist in the campaign against childhood obesity, the book carries a healthy-living message that promotes good nutrition and exercise.</p>
                     <div className="quote-snippets">

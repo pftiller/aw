@@ -40,15 +40,16 @@ h5{
 .float-left{
     float:left
 }
-.inline{
-    display:inline;
-    clear:both
+.inline {
+    display: inline;
+    clear: both;
 }
-.left{
-    margin-right:15px
+.isbn {
+    margin-left: 12.5%;
 }
-.right{
-    margin-left:15px
+.price {
+    margin-right: 12.5%;
+    float: right;
 }
 header{
     background-color:#e3e1e3;
@@ -246,27 +247,28 @@ nav a:active,nav a:visited{
     margin-left:10px
 }
 .cover{
-    width:180px;
-    height:auto;
-    float:left;
-    margin-top: 25px;
-    margin-left:7.5px;
-    -webkit-box-shadow:0 10px 25px -5px rgba(2,2,2,.8);
-    box-shadow:0 10px 25px -5px rgba(2,2,2,.8)
+
+    width: 180px;
+    display: block;
+    height: auto;
+    box-shadow: 0 10px 25px -5px rgba(2,2,2,.8);
+    margin: 25px auto;
 }
-.buy-now{
+.buy-now {
+    display: block;
     color: #fff;
     text-align: center;
-    font-size: 18px;
-    width: 30%;
-    margin: 5% 0 0 3.5%;
+    font-size: 16px;
+    width: 55%;
+    max-width:225px;
     font-family: Lobster,cursive;
     background: #5aad5a;
     border: 2px solid #0b6623;
     border-radius: 10px;
-    padding: 2.5px 8px;
-    float: left;
+    padding: 5px 5px;
     text-decoration: none;
+    margin: 10px auto;
+    float: none;
 }
 .buy-now:hover{
     cursor:pointer;
@@ -275,9 +277,6 @@ nav a:active,nav a:visited{
 .buy-now:active,.buy-now:hover,.buy-now:visited{
     color:#fff;
     text-decoration:none
-}
-.buy-now:nth-of-type(1) {
-    margin-top:25%;
 }
 .synopsis{
     margin-top: 35px;
@@ -408,27 +407,41 @@ footer{
     .book-details{
         width:70%;
         float:left;
-        margin-bottom:50px
+        margin-bottom:35px
     }
     .book-covers{
         width:25%;
         max-width:115px;
         float:left;
-        margin:-65px auto 0
+        margin:-65px auto 0;
+        height:auto;
     }
     .cover{
         width:75%;
-        margin:0 auto 15px
-    }
-    .buy-now,.cover{
+        margin:0 auto 15px;
         float:none;
         display:block
     }
     .buy-now{
-        width:90%;
-        margin: 15% 10px 0;
-        margin-left:auto;
-        margin-right:auto
+        display: inline-block;
+        font-size: 16px;
+        width: 65px;
+        padding: 2.5px 8px;
+    }
+    .purchase-links {
+        clear:both;
+    }
+    .price {
+        float:none;
+        margin-right:7.5%;
+    }
+    .isbn {
+        margin-left:0;
+        margin-right:7.5%;
+
+    }
+    .left{
+        margin-right:15px
     }
     .synopsis{
         clear:both;
