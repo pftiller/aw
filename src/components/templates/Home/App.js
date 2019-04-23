@@ -49,8 +49,11 @@ class App extends Component {
     }
 }
   toggleHamburger() {
-    if (this.state.condition==="open") {
+    if (this.state.condition==="open" && window.innerWidth < 670) {
         this.setState({condition: "closed"});
+    }
+    else if (this.state.condition==="open" && window.innerWidth > 670) {
+        this.setState({condition: "open"});
     }
     else {
       this.setState({condition: "open"});
