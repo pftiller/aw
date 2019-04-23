@@ -1,18 +1,19 @@
 # [START app_yaml]
 runtime: nodejs10
-env: flex
 manual_scaling:
-- instances: 1
+  instances: 1
 handlers:
 - url: /api/.*
   script: auto
+  secure: always
+  redirect_http_response_code: 301
 - url: /
   static_files: build/index.html
   upload: build/index.html
 - url: /
   static_dir: build
-#resources:
-  # cpu: .5
-  # memory_gb: 0.18
-  # disk_size_gb: 10
+# resources:
+#   cpu: .5
+#   memory_gb: 0.18
+#   disk_size_gb: 10
 # [END app_yaml]
