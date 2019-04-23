@@ -5,5 +5,5 @@ COPY ./build /var/www
 # Copy the ngnix configrations
 COPY deployments/nginx.conf /etc/nginx/nginx.conf
 # Expose it on port 80
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["nginx","-g","daemon off;"]
