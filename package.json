@@ -1,7 +1,7 @@
 {
   "name": "artwrite",
   "version": "1.0.0",
-  "homepage": "http://artwriteproductions.com",
+  "homepage": "https://artwriteproductions.com",
   "dependencies": {
     "@google-cloud/debug-agent": "^2.6.0",
     "express": "^4.16.3",
