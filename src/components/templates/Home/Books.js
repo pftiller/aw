@@ -20,11 +20,15 @@ export class Books extends React.Component {
                 <div className="purchase-links">
                     <p className="inline isbn">ISBN: 978-0977769391</p>
                     <p className="inline price">Price: $17.95</p>
-                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring/dp/0977769399/ref=sr_1_1?qid=1555778429&refinements=p_27%3AJerome+Tiller&s=books&sr=1-1&text=Jerome+Tiller" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Softcover</a>
+                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring-dp-0977769399/dp/0977769399" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Softcover</a>
                     <br/>
                     <p className="inline isbn">ISBN: 978-0977769308</p>
                     <p className="inline price">Price: $3.99</p>
-                    <a href="https://itunes.apple.com/us/book/sammys-day-at-the-fair/id1451766202?mt=11" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Ebook</a>
+                    <a href="https://books.apple.com/us/book/sammys-day-at-the-fair/id1451766202" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Apple Books</a>
+                    <br/>
+                    <p className="inline isbn">ISBN: 978-0977769384</p>
+                    <p className="inline price">Price: $3.99</p>
+                    <a href="https://www.amazon.com/Sammys-Day-Fair-Digestive-Featuring-ebook/dp/B07SB64QGS/" target="_blank" rel="noopener noreferrer" className="buy-now inline right">Kindle Store</a>
                 </div>    
 
                 <div className="synopsis">
