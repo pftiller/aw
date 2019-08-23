@@ -1,7 +1,5 @@
 # [START app_yaml]
 runtime: nodejs10
-manual_scaling:
-  instances: 1
 handlers:
 - url: /api/.*
   script: auto
@@ -18,8 +16,5 @@ handlers:
   redirect_http_response_code: 301
 - url: /robots.txt
   static_dir: build
-# resources:
-#   cpu: .5
-#   memory_gb: 0.18
-#   disk_size_gb: 10
-# [END app_yaml]
+
+
