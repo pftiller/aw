@@ -1,36 +1,17 @@
-import express from "express";
+const express = require("express");
 const app = express();
-import serverRenderer from '../middleware/renderer';
-import configureStore from '../../src/store/configureStore';
-import { setAsyncWidth } from '../../src/reducer/api';
+const configureStore = require('../../src/components/store/configureStore');
+const api = require('../../src/components/reducer/api');
 
 const router = express.Router();
-const path = require("path");
 
 
 const actionIndex = (req, res, next) => {
-        const store = configureStore();
+        const store = configureStore.configureStore();
 
-        store.dispatch(setAsyncWidth(400))
-            .then(() => {
-                serverRenderer(store)(req, res, next);
-            });
+        store.dispatch(api.setAsyncWidth(400))
 };
 
-
-app.configure('production', function () {
-    app.use (function (req, res, next) {
-      var schema = (req.headers['x-forwarded-proto'] || '').toLowerCase();
-      if (schema === 'https') {
-        next();
-      } else {
-        res.redirect('https://' + req.headers.host + req.url);
-      }
-    });
-  });
   app.use('/static', express.static('build'));
   router.use('^/$', actionIndex);
 
-
-
-export default router;

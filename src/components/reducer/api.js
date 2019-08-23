@@ -4,7 +4,7 @@ const initialState = {
     pixelRatio: null
 };
 
-export const api = (state = initialState, action) => {
+const api = (state = initialState, action) => {
 	switch (action.type) {
         case 'SET_WIDTH':
         return {
@@ -20,15 +20,15 @@ export const api = (state = initialState, action) => {
 			return state;
 	}
 };
-export const setWidth = widthDOM => ({ type: 'SET_WIDTH', width: widthDOM });
-export const setCondition = currentCondition => ({ type: 'SET_CONDITION', condition: currentCondition });
-export const setAsyncWidth = widthDOM => dispatch => (
+const setWidth = widthDOM => ({ type: 'SET_WIDTH', width: widthDOM });
+const setCondition = currentCondition => ({ type: 'SET_CONDITION', condition: currentCondition });
+const setAsyncWidth = widthDOM => dispatch => (
     new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 2000);
     })
         .then(() => dispatch(setWidth(widthDOM)))
 );
-export const setAsyncCondition = currentCondition => dispatch => (
+const setAsyncCondition = currentCondition => dispatch => (
     new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 2000);
     })

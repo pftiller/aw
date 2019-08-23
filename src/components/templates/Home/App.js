@@ -7,7 +7,7 @@ import {About} from './About';
 import { Books } from './Books';
 import { ReviewCycler } from './ReviewCycler';
 import {Footer} from './Footer';
-import { setWidth, setCondition} from '../../../reducer/api';
+import { setWidth, setCondition} from '../../reducer/api';
 import '../../../js/scroll';
 import '../../../css/styles.css';
 

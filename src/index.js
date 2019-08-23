@@ -5,7 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux'
 
 
 import App from './components/templates/Home';
-import configureStore from './store/configureStore';
+import configureStore from './components/store/configureStore';
 
 const store = configureStore( window.__REDUX_STATE__ || {} );
 
@@ -15,11 +15,11 @@ const AppBundle = (
     </ReduxProvider>
 );
 
-window.onload = () => {
-    Loadable.preloadReady().then(() => {
+// window.onload = () => {
+//     Loadable.preloadReady().then(() => {
         ReactDOM.hydrate(
             AppBundle,
             document.getElementById('root')
         );
-    });
-};
+//     });
+// };
