@@ -1,103 +1,36 @@
-import React, {
-    Component
-} from 'react';
-import update from 'immutability-helper';
-import ResizeDetector from 'react-resize-detector';
-import {
-    connect
-} from 'react-redux';
-import {
-    HeaderContents
-} from './Header';
-import {
-    Nav
-} from './Nav';
-import {
-    Carousel
-} from './Carousel';
-import {
-    About
-} from './About';
-import {
-    Books
-} from './Books';
-import {
-    ReviewCycler
-} from './ReviewCycler';
-import {
-    Footer
-} from './Footer';
-import {
-    api
-} from '../../../js/api';
-import '../../../js/scroll';
+import React, {Component} from 'react';
+import {HeaderContents} from './Header';
+import {Carousel} from './Carousel';
+import {About} from './About';
+import {Books} from './Books';
+import {ReviewCycler} from './ReviewCycler';
+import {Footer} from './Footer';
 import '../../../css/styles.css';
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.headerRef = React.createRef()
-        this.state = {};
+        this.state = {
+            width: window.innerWidth
+        };
     }
     componentDidMount() {
-        let width = this.headerRef.current.clientWidth;
-        let condition = () => {
-            if (width > 1200) {
-                return "open"
-            } else {
-                return "closed"
-            }
-        }
+        window.addEventListener("resize", this.onResize);
+    }
+    onResize = () => {
         this.setState({
-            width: width,
-            condition: condition()
+            width: window.innerWidth
         })
     }
-    onResize=()=> {
-       return new Promise((width) => {
-                if (width > 1200) {
-                    return {
-                        width: width,
-                        condition: "open"
-                    }
-                } else {
-                    return {
-                        width: width,
-                        condition: "closed"
-                    }
-                }
-            }).then(resp=> {
-                let newState = update(resp);
-                this.setState({
-                    newState
-                })
-            })
+    componentWillUnmount() {
+        window.addEventListener("resize", this.onResize);
     }
-    
-    
-    toggleHamburger() {
-        if (this.state.condition === "closed" && this.state.width < 1200) {
-            this.setState({
-                condition: "closed"
-            });
-        } else if (this.state.condition === "open" && this.state.width > 1200) {
-            this.setState({
-                condition: "open"
-            });
-        } else {
-            this.setState({
-                condition: "open"
-            });
-        }
-    }
-
-render() {
+    render() {
         return (
             <div>
                 <div className="App-intro">
-                    <header className="header-down" ref={this.headerRef}>
-                        <HeaderContents toggleHamburger={this.toggleHamburger} width={this.state.width} condition={this.state.condition}/>
-                        {/* <Nav toggleHamburger={this.toggleHamburger}/> */}
+                    <header className="header-down">
+                        <HeaderContents width={this.state.width}/>
                     </header>
                     <main>
                         <Carousel />
@@ -105,12 +38,11 @@ render() {
                         <Books />
                         <ReviewCycler />
                         <Footer/>
-                       
                     </main>
-                    <ResizeDetector handleWidth onResize={this.onResize} />
                 </div>
             </div>
         );
     }
 }
+
 export default App;

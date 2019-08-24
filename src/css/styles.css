@@ -70,18 +70,7 @@ header{
 .header-up {
     top: -53.50%;
 }
-.close-icon,.hamburger-icon{
-    z-index:2;
-    position:absolute;
-    right:15px;
-    top:15px
-}
-.close-icon {
-    width: 20px;
-}
-.hamburger-icon {
-    width:24px;
-}
+
 nav{
     display:-ms-flexbox;
     display:flex;
@@ -155,6 +144,18 @@ nav a:hover{
 nav a:active,nav a:visited{
     color:#fff;
     text-decoration:none
+}
+.close-icon,.hamburger-icon{
+    z-index:2;
+    position:absolute;
+    right:15px;
+    top:15px
+}
+.close-icon {
+    width: 20px;
+}
+.hamburger-icon {
+    width:24px;
 }
 #about,#books,#home,#reviews{
     width:90%;
@@ -459,9 +460,7 @@ footer{
     header{
         position: relative;;
     }
-    .hamburger-icon, .close-icon {
-        visibility:collapse
-    }
+
     nav li{
         width: 25%;
         height: 40px;
@@ -482,5 +481,11 @@ footer{
     .right-arrow{
         right:40px;
         bottom:70px
+    }
+}
+@media screen and (min-width:1200px){
+
+    .hamburger-icon, .close-icon {
+        visibility:collapse
     }
 }
