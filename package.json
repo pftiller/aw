@@ -3,50 +3,38 @@
   "version": "1.0.0",
   "homepage": "https://artwriteproductions.com",
   "dependencies": {
-    "@google-cloud/debug-agent": "^2.6.0",
     "express": "^4.16.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "immutability-helper": "^3.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-loadable": "^5.3.1",
     "react-redux": "^5.0.7",
+    "react-resize-detector": "^4.2.0",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "3.1.1",
     "react-social-icons": "^3.0.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build": "next build",
-    "start": "node server.js",
-    "docker:build": "docker build -t frontend .",
-    "docker:clean": "docker rm -f frontend || true",
-    "docker:run": "docker run -p 3000:3000 --name frontend frontend",
-    "docker:stop": "docker stop frontend",
-    "docker:start": "docker start frontend && yarn run docker:logs",
-    "docker:logs": "docker logs -f frontend",
-    "deploy": "yarn run docker:build && yarn run docker:clean && yarn run docker:run",
-    "gcp-build": "NODE_ENV=production npm run build",
-    "lint-watch": "esw -w --fix --clear --ext .js --ext .jsx components src pages"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "autoprefixer": "7.1.5",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-module-resolver": "^2.7.1",
-    "babel-plugin-wrap-in-js": "^1.1.0",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-watch": "^4.0.2",
-    "glob": "^7.1.2",
-    "node-sass": "^4.4.0",
-    "normalize.css": "^7.0.0",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-loader": "^2.0.7",
-    "raw-loader": "^0.5.1",
-    "react-dom": "^16.2.0",
-    "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
