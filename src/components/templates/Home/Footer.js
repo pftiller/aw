@@ -12,7 +12,7 @@ export class Footer extends React.Component {
                     <SocialIcon url="mailto:jtiller@adaptedclassics.com"/>
                 </div>
                 <p className="copyright">&copy; {new Date().getFullYear()} ArtWrite Productions</p>
-                <p className="site-design">Site design by Paul Tiller</p>
+                <p className="site-design">Site design by <a className="unstyled-links" href="https://www.linkedin.com/in/paultiller/" target="_blank" rel="noopener noreferrer">Paul Tiller</a></p>
             </footer>
         )
     }

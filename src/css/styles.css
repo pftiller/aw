@@ -404,6 +404,11 @@ footer{
     float:right;
     text-align:right
 }
+.unstyled-links, .unstyled-links:visited, .unstyled-links:hover, a.unstyled-links:active{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
 @media screen and (min-width:600px){
     .book-details{
         width:70%;
