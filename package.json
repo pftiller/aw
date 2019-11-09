@@ -4,6 +4,7 @@
   "homepage": "https://artwriteproductions.com",
   "dependencies": {
     "express": "^4.16.3",
+    "raw-html-react": "^1.2.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",

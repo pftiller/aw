@@ -1,105 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+Bhai|Karla:400,400i,700|Lobster);
 body{
     margin:0;
-    /* padding-top:53.50%; */
-    font-family:sans-serif;
+    font-family: Karla, sans-serif;
     line-height:2;
     position:relative
-}
-main{
-    font-family:Karla,sans-serif;
-    margin-top: 25px;
 }
 p{
     -webkit-margin-before:0;
     -webkit-margin-after:0
 }
-h2{
-    font-size:22px
+.inline{
+    display:inline;
+    clear:both
 }
-h3{
-    font-size:20px;
-    margin-top:15px
+header {
+    background-color: #e3e1e3;
+    position: relative;
+    top: 0;
+    width: 100%;
+    -webkit-transition: top .2s ease-in-out;
+    transition: top .2s ease-in-out;
+    z-index: 100;
 }
-h3,h4{
-    margin-bottom:5px
-}
-h4{
-    font-size:16px
-}
-h4,h5{
-    -webkit-margin-after:0
-}
-h5{
-    font-size:15px;
-    -webkit-margin-before:0
-}
-.float-right{
-    float:right
-}
-.float-left{
-    float:left
-}
-.inline {
-    display: inline;
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     clear: both;
 }
-.isbn {
-    margin-left: 12.5%;
+nav > ul {
+    margin: 10px auto;
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-margin-after: 0;
 }
-.price {
-    margin-right: 12.5%;
-    float: right;
-}
-header{
-    background-color:#e3e1e3;
-    position: relative;;
-    top:0;
-    width:100%;
-    transition: top 0.2s ease-in-out;
-    z-index:100
-}
-.logo{
-    display:block;
-    width:25%;
-    height:auto;
-    margin:0 auto;
-    padding:15px;
-    max-width:140px
-}
-.header-up {
-    top: -53.50%;
-}
-
-nav{
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-direction:row;
-    flex-direction:row;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap;
-    -ms-flex-pack:center;
-    justify-content:center;
-    -ms-flex-line-pack:center;
-    align-content:center;
-    text-align:center;
-    clear:both;
-}
-nav>ul{
-    margin:10px auto;
-    list-style:none;
-    -webkit-margin-before:0;
-    -webkit-padding-start:0;
-    -webkit-margin-after:0
-}
-nav li{
-    font-family:Baloo Bhai,cursive;
-    font-size:1.5rem;
-    width:50%;
-    margin:0;
-    height:75px;
-    padding-top:30px;
-    display:inline-block
+nav li {
+    font-family: Baloo Bhai,cursive;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0;
+    height: 75px;
+    padding-top: 30px;
+    display: inline-block;
 }
 nav li:first-child{
     background-color:#306030
@@ -129,21 +75,26 @@ nav li:last-child:hover{
     background-color:#1f1515;
     cursor:pointer
 }
-nav a{
-    padding: 32.5px 65px;
+nav a, nav a:hover, 
+nav a:active, nav a:visited  {
+    color: #fff;
+    text-decoration: none;
+}
 
+.isbn{
+    margin-left:12.5%
 }
-nav a,nav a:hover{
-    color:#fff;
-    text-decoration:none
+.price{
+    margin-right:12.5%;
+    float:right
 }
-nav a:hover{
-    font-weight:bolder;
-    cursor:pointer
-}
-nav a:active,nav a:visited{
-    color:#fff;
-    text-decoration:none
+.logo{
+    display:block;
+    width:25%;
+    height:auto;
+    margin:0 auto;
+    padding:15px;
+    max-width:140px
 }
 .close-icon,.hamburger-icon{
     z-index:2;
@@ -151,11 +102,14 @@ nav a:active,nav a:visited{
     right:15px;
     top:15px
 }
-.close-icon {
-    width: 20px;
+.close-icon{
+    width:20px
 }
-.hamburger-icon {
-    width:24px;
+.hamburger-icon{
+    width:24px
+}
+main {
+    margin-top:25px;
 }
 #about,#books,#home,#reviews{
     width:90%;
@@ -188,9 +142,6 @@ nav a:active,nav a:visited{
 .caption{
     width:70%;
     margin:0 auto
-}
-.caption h3{
-    white-space:nowrap
 }
 .caption h3,.caption p{
     color:#fff;
@@ -238,9 +189,15 @@ nav a:active,nav a:visited{
 .book-title{
     font-weight:bolder
 }
-.book-subtitle{
-    -webkit-text-emphasis:emp;
-    text-emphasis:emp
+h3, h4, h5 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+h4 {
+    font-size: 1.05em;
+}
+h5 {
+    font-size: 1.05em;
 }
 .book-covers{
     height:270px;
@@ -248,28 +205,27 @@ nav a:active,nav a:visited{
     margin-left:10px
 }
 .cover{
-
-    width: 180px;
-    display: block;
-    height: auto;
-    box-shadow: 0 10px 25px -5px rgba(2,2,2,.8);
-    margin: 25px auto;
+    width:180px;
+    display:block;
+    height:auto;
+    box-shadow:0 10px 25px -5px rgba(2,2,2,.8);
+    margin:25px auto
 }
-.buy-now {
-    display: block;
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    width: 55%;
+.buy-now{
+    display:block;
+    color:#fff;
+    text-align:center;
+    font-size:16px;
+    width:55%;
     max-width:225px;
-    font-family: Lobster,cursive;
-    background: #5aad5a;
-    border: 2px solid #0b6623;
-    border-radius: 10px;
-    padding: 5px 5px;
-    text-decoration: none;
-    margin: 10px auto;
-    float: none;
+    font-family:Lobster,cursive;
+    background:#5aad5a;
+    border:2px solid #0b6623;
+    border-radius:10px;
+    padding:5px;
+    text-decoration:none;
+    margin:10px auto;
+    float:none
 }
 .buy-now:hover{
     cursor:pointer;
@@ -279,10 +235,7 @@ nav a:active,nav a:visited{
     color:#fff;
     text-decoration:none
 }
-.synopsis{
-    margin-top: 35px;
-}
-.quote-snippets{
+.quote-snippets,.synopsis{
     margin-top:35px
 }
 .quote-books{
@@ -292,13 +245,13 @@ nav a:active,nav a:visited{
 .quote-marks{
     width:14px;
     display:inline;
-    margin-bottom: 5px;
+    margin-bottom:5px
 }
-.opening {
-    margin-right:4px;
+.opening{
+    margin-right:4px
 }
-.closing {
-    margin-left:4px;
+.closing{
+    margin-left:4px
 }
 .for-books{
     -webkit-filter:invert(15%) sepia(39%) saturate(5702%) hue-rotate(350deg) brightness(92%) contrast(127%);
@@ -322,7 +275,6 @@ nav a:active,nav a:visited{
     margin:20px auto 25px;
     display:block;
     -webkit-transform:rotate(-5deg);
-    -ms-transform:rotate(-5deg);
     transform:rotate(-5deg)
 }
 .quotes{
@@ -340,15 +292,6 @@ nav a:active,nav a:visited{
     margin-bottom:10px;
     display:inline
 }
-.quote-appear{
-    opacity:.01
-}
-.quote-appear.quote-appear-active{
-    opacity:1;
-    -webkit-transition:opacity .5s ease-in;
-    -o-transition:opacity .5s ease-in;
-    transition:opacity .5s ease-in
-}
 .cite{
     font-size:12px;
     font-weight:bolder;
@@ -356,13 +299,13 @@ nav a:active,nav a:visited{
     -webkit-margin-after:0;
     margin-bottom:4px
 }
-footer{
-    background-color:#e3e1e3;
-    padding-top:70px;
-    margin-top:70px;
-    width:100%;
-    min-height:200px;
-    position:absolute
+footer {
+    background-color: #e3e1e3;
+    padding-top: 70px;
+    margin-top: 70px;
+    width: 100%;
+    min-height: 200px;
+    position: absolute;
 }
 .logo-footer{
     width:20%;
@@ -372,27 +315,24 @@ footer{
 }
 .social-icons{
     width:70%;
-    display:-ms-flexbox;
     display:flex;
-    -ms-flex-direction:row;
     flex-direction:row;
-    -ms-flex-pack:center;
     justify-content:center;
     margin:25px auto
 }
 .social-icon{
     margin:0 10px;
-    width:30px !important;
-    height:30px !important
+    width:30px!important;
+    height:30px!important
 }
 .social-svg-mask{
-    fill:#000 !important
+    fill:#000!important
 }
 .copyright,.site-design{
     width:46%;
     margin-top:25px;
     display:inline-block;
-    font-size: .85rem;
+    font-size:.85rem;
     margin-right:2%;
     margin-left:2%
 }
@@ -404,23 +344,22 @@ footer{
     float:right;
     text-align:right
 }
-.unstyled-links, .unstyled-links:visited, .unstyled-links:hover, a.unstyled-links:active{
-    color: inherit;
-    cursor: pointer;
+.unstyled-links {
+    color:#000;
     text-decoration: none;
 }
 @media screen and (min-width:600px){
     .book-details{
-        width:70%;
+        width:75%;
         float:left;
         margin-bottom:35px
     }
     .book-covers{
-        width:25%;
+        width:20%;
         max-width:115px;
         float:left;
         margin:-65px auto 0;
-        height:auto;
+        height:auto
     }
     .cover{
         width:75%;
@@ -429,22 +368,22 @@ footer{
         display:block
     }
     .buy-now{
-        display: inline-block;
-        font-size: 16px;
-        width: 20%;
-        padding: 2.5px 8px;
+        display:inline-block;
+        font-size:16px;
+        width:20%;
+        padding:2.5px 8px
     }
-    .purchase-links {
-        clear:both;
+    .purchase-links{
+        clear:both
     }
-    .price {
-        float:none;
-        margin-right:7.5%;
+    .price{
+        float:none
     }
-    .isbn {
-        margin-left:0;
-        margin-right:7.5%;
-
+    .isbn,.price{
+        margin-right:7.5%
+    }
+    .isbn{
+        margin-left:0
     }
     .left{
         margin-right:15px
@@ -453,27 +392,13 @@ footer{
         clear:both;
         margin-top:25px
     }
-    .light-pink{
-        background-repeat:no-repeat;
-        background-size:110% 900px
-    }
 }
 @media screen and (min-width:670px){
-    main{
-        margin-top: 50px;
-    }
-    header{
-        position: relative;;
-    }
-
-    nav li{
+    nav li {
         width: 25%;
         height: 40px;
         padding-top: 3px;
         font-size: 1.25rem;
-    }
-    nav a {
-        padding: 5px 25%;
     }
     #about,#books,#home,#reviews{
         width:70%;
@@ -489,8 +414,7 @@ footer{
     }
 }
 @media screen and (min-width:1200px){
-
-    .hamburger-icon, .close-icon {
+    .close-icon,.hamburger-icon{
         visibility:collapse
     }
 }
