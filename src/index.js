@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import Home from './components/templates/Home';
-
-render(<Home />, document.getElementById('root'));
+import * as serviceWorker from './serviceWorker'
+ReactDOM.render(<Home />, document.getElementById('root'));
+serviceWorker.register();
