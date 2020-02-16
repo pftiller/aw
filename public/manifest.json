@@ -1,7 +1,7 @@
 {
   "short_name": "ArtWrite Productions",
   "name": "ArtWrite Productions",
-  "background-color": "#e3e1e3",
+  "background_color": "#e3e1e3",
   "theme_color": "#e3e1e3",
   "description": "A family-owned publishing company",
   "icons": [{

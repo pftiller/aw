@@ -16,4 +16,8 @@ yarn-error.log*
 /public/ozr1zxehhq1m1zc7twdx06stiao52c.html
 /public/BingSiteAuth.xml
 
+#environment
 .vscode
+
+#variable
+.env

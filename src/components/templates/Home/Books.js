@@ -1,4 +1,5 @@
 import React from 'react';
+import { Picture } from 'react-responsive-picture';
 let pink = '/images/pink.png';
 
 export class Books extends React.Component {
@@ -15,7 +16,19 @@ export class Books extends React.Component {
                     <p>By Jerome Tiller - Illustrated by Paul Tiller</p>
                 </div>
                 <div className="book-covers">
-                    <img src="./images/sammy-cover.jpg" className="cover" alt="Sammy's Day at the Fair - Available Now!" />
+                    < Picture
+                    alt = "Sammy's Day at the Fair - Available Now!"
+                    sources = {
+                        [{
+                                srcSet: "./images/sammy-cover.jpg",
+                            },
+                            {
+                                srcSet: "./images/sammy-cover.webp",
+                                type: "image/webp"
+                            }
+                        ]
+                    }
+                    />
                 </div>
                 <div className="purchase-links">
                     <p className="inline isbn">ISBN: 978-0977769391</p>

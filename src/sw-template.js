@@ -4,9 +4,6 @@ if ('function' === typeof importScripts) {
     );
     /* global workbox */
     if (workbox) {
-      console.log('Workbox is loaded');
-  
-      /* injection point for manifest files.  */
       workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
     } else {
         console.log('Workbox could not be loaded. No Offline support');
