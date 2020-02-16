@@ -1,17 +1,18 @@
-const workboxPlugin = require('workbox-webpack-plugin');
-var path = require('path');
+const path = require("path");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = {
     context: __dirname,
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js',
+        path: path.resolve(__dirname, 'build'),
+        filename: 'js/bundle.js',
         publicPath: '/',
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        contentBase: path.join(__dirname, 'build')
     },
     module: {
         rules: [{
@@ -20,8 +21,13 @@ module.exports = {
             },
             {
                 test: /\.(png|j?g|jpe?g|svg|gif)$/i,
+                include: path.join(__dirname, 'images'),
                 use: 'file-loader',
                 use: 'webp-loader'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             },
             {
                 test: /\.(js|jsx)$/,
@@ -39,11 +45,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: path.resolve(__dirname, './public/index.html'),
-            filename: 'index.html'
+            template: "./src/index.html",
+            filename: "index.html"
         }),
-        new workboxPlugin.GenerateSW({
-            swDest: 'build/sw.js'
-        })
+        new GenerateSW({
+            swDest: 'sw.js'
+          })
     ]
 }

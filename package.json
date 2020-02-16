@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "express": "^4.16.3",
     "firebase": "^7.8.2",
     "html-webpack-plugin": "^3.2.0",
@@ -15,13 +16,19 @@
     "react-responsive-picture": "^3.2.2",
     "react-scripts": "^3.3.1",
     "react-social-icons": "^3.0.0",
-    "webpack": "^4.41.5",
-    "workbox-webpack-plugin": "^5.0.0"
+    "webpack": "^4.41.6",
+    "workbox-webpack-plugin": "^5.0.0",
+    "workbox-window": "^5.0.0"
   },
   "scripts": {
-    "webpack-dev-server": "webpack-dev-server",
-    "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production"
+    "start": "node server.js",
+    "bundle": "webpack --config webpack.config.js",
+    "build-sw": "node ./src/sw-build.js",
+    "prestart": "npm run bundle",
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode=production",
+    "build-old": "webpack --mode=production && npm run build-sw"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +51,7 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "json-loader": "^0.5.7",
     "webp-loader": "^0.6.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.3",

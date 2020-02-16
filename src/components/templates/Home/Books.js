@@ -20,10 +20,10 @@ export class Books extends React.Component {
                     alt = "Sammy's Day at the Fair - Available Now!"
                     sources = {
                         [{
-                                srcSet: "./images/sammy-cover.jpg",
+                                srcSet: "/images/sammy-cover.jpg",
                             },
                             {
-                                srcSet: "./images/sammy-cover.webp",
+                                srcSet: "/images/sammy-cover.webp",
                                 type: "image/webp"
                             }
                         ]
