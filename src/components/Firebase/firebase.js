@@ -1,4 +1,4 @@
-import app from 'firebase/app'
+import app from './node_modules/firebase/app'
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,

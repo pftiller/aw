@@ -1,18 +1,12 @@
 # [START app_yaml]
 runtime: nodejs10
+default_expiration: "10d"
 handlers:
-- url: /api/.*
-  script: auto
-  secure: always
-  redirect_http_response_code: 301
-- url: /
-  static_files: build/index.html
-  upload: build/index.html
-  secure: always
-  redirect_http_response_code: 301
-- url: /
-  static_dir: build
-  secure: always
-  redirect_http_response_code: 301
-- url: /robots.txt
-  static_dir: build
+  - url: /static
+    static_dir: build
+    secure: always
+    redirect_http_response_code: 301
+  - url: /.*
+    script: auto
+    secure: always
+    redirect_http_response_code: 301

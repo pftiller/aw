@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const {GenerateSW} = require('workbox-webpack-plugin');
+const {
+    GenerateSW
+} = require('workbox-webpack-plugin');
 
 module.exports = {
     context: __dirname,
@@ -34,11 +36,9 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/preset-env',
-                        '@babel/react', {
-                            'plugins': ['@babel/plugin-proposal-class-properties']
-                        }
-                    ]
+                    presets: ['@babel/preset-env', '@babel/react', ],
+                    plugins: ['@babel/plugin-proposal-class-properties']
+
                 }
             }
         ]
@@ -46,10 +46,11 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
-            filename: "index.html"
+            filename: "index.html",
+            hash: true
         }),
         new GenerateSW({
             swDest: 'sw.js'
-          })
+        })
     ]
 }

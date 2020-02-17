@@ -1,9 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Baloo+Bhai|Karla:400,400i,700|Lobster);
+@import url(https://fonts.googleapis.com/css?family=Baloo+Bhai|Karla:400,400i,700|Lobster&display=swap);
 body{
     margin:0;
     font-family: Karla, sans-serif;
     line-height:2;
-    position:relative
+    position:relative;
+    font-display: swap;
 }
 p{
     -webkit-margin-before:0;
@@ -46,6 +47,7 @@ nav li {
     height: 75px;
     padding-top: 30px;
     display: inline-block;
+    font-display: swap;
 }
 nav li:first-child{
     background-color:#306030
@@ -149,7 +151,8 @@ main {
 }
 .green{
     color:#306030;
-    font-family:Baloo Bhai,cursive
+    font-family:Baloo Bhai,cursive;
+    font-display: swap;
 }
 .buttons{
     width:100%
@@ -173,7 +176,8 @@ main {
 }
 .brown{
     color:#604830;
-    font-family:Baloo Bhai,cursive
+    font-family:Baloo Bhai,cursive;
+    font-display: swap;
 }
 .paul-and-jerry{
     width:300px;
@@ -184,7 +188,8 @@ main {
 }
 .pink{
     color:#812525;
-    font-family:Baloo Bhai,cursive
+    font-family:Baloo Bhai,cursive;
+    font-display: swap;
 }
 .book-title{
     font-weight:bolder
@@ -219,6 +224,7 @@ h5 {
     width:55%;
     max-width:225px;
     font-family:Lobster,cursive;
+    font-display: swap;
     background:#5aad5a;
     border:2px solid #0b6623;
     border-radius:10px;
@@ -263,7 +269,8 @@ h5 {
 }
 .purple{
     color:#483030;
-    font-family:Baloo Bhai,cursive
+    font-family:Baloo Bhai,cursive;
+    font-display: swap;
 }
 #reviews{
     min-height:600px
@@ -287,6 +294,7 @@ h5 {
 .quote{
     font-size:16px;
     font-style:italic;
+    font-display: swap;
     color:#353535;
     line-height:22px;
     margin-bottom:10px;
