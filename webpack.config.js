@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const {
     GenerateSW
 } = require('workbox-webpack-plugin');
@@ -22,6 +23,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
+                test: /modernizr.config.js$/,
+                use: ['modernizr-loader'],
+            },
+            {
                 test: /\.(png|j?g|jpe?g|svg|gif)$/i,
                 include: path.join(__dirname, 'images'),
                 use: 'file-loader',
@@ -29,7 +34,8 @@ module.exports = {
             },
             {
                 test: /\.json$/,
-                loader: 'json-loader'
+                loader: 'json-loader',
+                type: 'javascript/auto',
             },
             {
                 test: /\.(js|jsx)$/,
@@ -52,5 +58,11 @@ module.exports = {
         new GenerateSW({
             swDest: 'sw.js'
         })
-    ]
+    ],
+    // resolve: {
+    //     alias: {
+    //         // You can add comment "Please do not delete this file" in this file
+    //         modernizr$: path.resolve(__dirname, './config/.modernizrrc')
+    //     }
+    // }
 }

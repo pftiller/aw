@@ -1,11 +1,25 @@
 import React from 'react';
+import { Picture } from 'react-responsive-picture';
 import { SocialIcon } from 'react-social-icons';
 
 export class Footer extends React.Component {
     render() {
         return(
             <footer>
-                <img src='./images/artwrite-logo.png' alt="ArtWrite Productions Logo" className="logo-footer"/>
+                    < Picture
+                        className = "logo-footer"
+                        alt = "ArtWrite Productions Logo"
+                        sources = {
+                            [{
+                                    srcSet: "/images/artwrite-logo.png",
+                                },
+                                {
+                                    srcSet: "/images/artwrite-logo.webp",
+                                    type: "image/webp"
+                                }
+                            ]
+                        }
+                    />
                 <div className="social-icons">
                     <SocialIcon url="https://www.facebook.com/artwriteproductions" styles="fill:black!important;"/>
                     <SocialIcon url="https://www.linkedin.com/company/9729956"/>

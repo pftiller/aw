@@ -1,4 +1,5 @@
 import React from 'react';
+import Modernizr from '../../../../config/modernizr.config';
 import { Picture } from 'react-responsive-picture';
 let pink = '/images/pink.png';
 

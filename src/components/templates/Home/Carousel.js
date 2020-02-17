@@ -1,6 +1,8 @@
 import React from 'react';
-import {Arrows} from './Arrows';
-let green = '/images/green.png';
+import Modernizr from '../../../../config/modernizr.config';
+;import {Arrows} from './Arrows';
+let green;
+
 
 export class Carousel extends React.Component {
     constructor(props) {
@@ -9,9 +11,13 @@ export class Carousel extends React.Component {
         index: 0
       };
     }
-
-
     render() {
+      if(Modernizr.webp) {
+         green = '/images/green.webp';
+      }
+      else {
+         green = '/images/green.png';
+      }
      let styles = {
         background: `url(${green}) bottom / 107% 94% no-repeat`
       }

@@ -1,8 +1,15 @@
 import React from 'react';
+import Modernizr from '../../../../config/modernizr.config';
 import { Picture } from 'react-responsive-picture';
-let orange = './images/orange.png';
+let orange;
 export class About extends React.Component {
     render(){
+        if(Modernizr.webp) {
+            orange = '/images/orange.webp';
+         }
+         else {
+            orange = '/images/orange.png';
+         }
         let styles = {
             background: `url(${orange}) center center / 100% 97.5% no-repeat`
         }

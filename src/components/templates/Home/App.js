@@ -16,14 +16,6 @@ class App extends Component {
     }
     componentDidMount() {
         window.addEventListener("resize", this.onResize);
-    //     Modernizr.on('img/webp', function( result ) {
-    //         if (result) {
-    //             document.documentElement.classList.add('webp')
-    //         }
-    //         else {
-    //             document.documentElement.classList.add('no-webp')
-    //         }
-    //     })
     }
     onResize = () => {
         this.setState({

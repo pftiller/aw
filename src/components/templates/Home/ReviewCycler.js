@@ -1,6 +1,7 @@
 import React from 'react';
+import Modernizr from '../../../../config/modernizr.config';
 import {Reviews} from './Reviews';
-let purple = './images/purple.png';
+let purple;
 export class ReviewCycler extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +22,13 @@ export class ReviewCycler extends React.Component {
     componentWillUnmount() {
         clearInterval(this.interval);
       }
-    render() {    
+    render() {
+        if(Modernizr.webp) {
+            purple = '/images/purple.webp';
+         }
+         else {
+            purple = '/images/purple.png';
+         }
         let styles = {
             background: `url(${purple}) center center / 105% 95% no-repeat`   
         }
