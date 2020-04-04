@@ -6,7 +6,8 @@ import {Books} from './Books';
 import {ReviewCycler} from './ReviewCycler';
 import {Footer} from './Footer';
 import '../../../css/styles.css';
-
+import * as firebase from 'firebase/app';
+import firebaseCredentials from '../../firebase/firebase';
 class App extends Component {
     constructor(props) {
         super(props);
@@ -15,6 +16,7 @@ class App extends Component {
         };
     }
     componentDidMount() {
+        firebase.initializeApp({firebaseCredentials});
         window.addEventListener("resize", this.onResize);
     }
     onResize = () => {

@@ -1,428 +1,619 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+Bhai|Karla:400,400i,700|Lobster&display=swap);
-body{
-    margin:0;
-    font-family: Karla, sans-serif;
-    line-height:2;
-    position:relative;
-    font-display: swap;
-}
-p{
-    -webkit-margin-before:0;
-    -webkit-margin-after:0
-}
-.inline{
-    display:inline;
-    clear:both
-}
-header {
-    background-color: #e3e1e3;
-    position: relative;
-    top: 0;
-    width: 100%;
-    -webkit-transition: top .2s ease-in-out;
-    transition: top .2s ease-in-out;
-    z-index: 100;
-}
-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    clear: both;
-}
-nav > ul {
-    margin: 10px auto;
-    list-style: none;
-    -webkit-margin-before: 0;
-    -webkit-padding-start: 0;
-    -webkit-margin-after: 0;
-}
-nav li {
-    font-family: Baloo Bhai,cursive;
-    font-size: 1.5rem;
-    width: 50%;
-    margin: 0;
-    height: 75px;
-    padding-top: 30px;
-    display: inline-block;
-    font-display: swap;
-}
-nav li:first-child{
-    background-color:#306030
-}
-nav li:nth-child(2){
-    background-color:#d89030
-}
-nav li:nth-child(3){
-    background-color:#d87878
-}
-nav li:last-child{
-    background-color:#483030
-}
-nav li:first-child:hover{
-    background-color:#193319;
-    cursor:pointer
-}
-nav li:nth-child(2):hover{
-    background-color:#b37522;
-    cursor:pointer
-}
-nav li:nth-child(3):hover{
-    background-color:#c94343;
-    cursor:pointer
-}
-nav li:last-child:hover{
-    background-color:#1f1515;
-    cursor:pointer
-}
-nav a, nav a:hover, 
-nav a:active, nav a:visited  {
-    color: #fff;
-    text-decoration: none;
+
+body {
+  margin: 0;
+  font-family: Karla, sans-serif;
+  line-height: 2;
+  position: relative;
+  font-display: swap;
 }
 
-.isbn{
-    margin-left:12.5%
-}
-.price{
-    margin-right:12.5%;
-    float:right
-}
-.logo{
-    display:block;
-    width:25%;
-    height:auto;
-    margin:0 auto;
-    padding:15px;
-    max-width:140px
-}
-.close-icon,.hamburger-icon{
-    z-index:2;
-    position:absolute;
-    right:15px;
-    top:15px
-}
-.close-icon{
-    width:20px
-}
-.hamburger-icon{
-    width:24px
-}
-main {
-    margin-top:25px;
-}
-#about,#books,#home,#reviews{
-    width:90%;
-    padding-top:70px;
-    margin:-70px auto 50px
-}
-#home{
-    padding-bottom:35px;
-    position:relative
-}
-.carousel p{
-    margin-bottom:10px;
-    line-height:1.25
-}
-.slide{
-    border-radius:10px;
-    width:90%;
-    height:500px;
-    margin:auto
-}
-.grey-backdrop{
-    position:absolute;
-    bottom:35px;
-    left:5%;
-    width:90%;
-    background:rgba(0,0,0,.3);
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px
-}
-.caption{
-    width:70%;
-    margin:0 auto
-}
-.caption h3,.caption p{
-    color:#fff;
-    text-shadow:2px 2px 4px #000
-}
-.green{
-    color:#306030;
-    font-family:Baloo Bhai,cursive;
-    font-display: swap;
-}
-.buttons{
-    width:100%
-}
-.left-arrow,.right-arrow{
-    width:20px;
-    height:auto;
-    position:absolute;
-    z-index:2
-}
-.left-arrow{
-    left:35px;
-    bottom:85px
-}
-.right-arrow{
-    right:35px;
-    bottom:85px
-}
-#about p{
-    margin-top:25px
-}
-.brown{
-    color:#604830;
-    font-family:Baloo Bhai,cursive;
-    font-display: swap;
-}
-.paul-and-jerry{
-    width:300px;
-    height:auto;
-    margin:10px auto;
-    display:block;
-    border:20px solid #d89030
-}
-.pink{
-    color:#812525;
-    font-family:Baloo Bhai,cursive;
-    font-display: swap;
-}
-.book-title{
-    font-weight:bolder
-}
-h3, h4, h5 {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-}
-h4 {
-    font-size: 1.05em;
-}
+h3,
+h4,
 h5 {
-    font-size: 1.05em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
-.book-covers{
-    height:270px;
-    margin-bottom:20px;
-    margin-left:10px
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
-.cover{
-    width:180px;
-    display:block;
-    height:auto;
-    box-shadow:0 10px 25px -5px rgba(2,2,2,.8);
-    margin:25px auto
+
+a {
+  color: #3666b0;
 }
-.buy-now{
-    display:block;
-    color:#fff;
-    text-align:center;
-    font-size:16px;
-    width:55%;
-    max-width:225px;
-    font-family:Lobster,cursive;
-    font-display: swap;
-    background:#5aad5a;
-    border:2px solid #0b6623;
-    border-radius:10px;
-    padding:5px;
-    text-decoration:none;
-    margin:10px auto;
-    float:none
+
+.inline {
+  display: inline;
+  clear: both;
 }
-.buy-now:hover{
-    cursor:pointer;
-    background:#b5dab5
+
+header {
+  background-color: #e3e1e3;
+  position: relative;
+  top: 0;
+  width: 100%;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  z-index: 100;
 }
-.buy-now:active,.buy-now:hover,.buy-now:visited{
-    color:#fff;
-    text-decoration:none
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  clear: both;
 }
-.quote-snippets,.synopsis{
-    margin-top:35px
+
+nav > ul {
+  margin: 10px auto;
+  list-style: none;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-after: 0;
 }
-.quote-books{
-    line-height:1.75;
-    display:inline
+
+nav li {
+  font-family: Baloo Bhai, cursive;
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0;
+  height: 75px;
+  padding-top: 30px;
+  display: inline-block;
+  font-display: swap;
 }
-.quote-marks{
-    width:14px;
-    display:inline;
-    margin-bottom:5px
+
+nav li:first-child {
+  background-color: #306030;
 }
-.opening{
-    margin-right:4px
+
+nav li:nth-child(2) {
+  background-color: #d89030;
 }
-.closing{
-    margin-left:4px
+
+nav li:nth-child(3) {
+  background-color: #d87878;
 }
-.for-books{
-    -webkit-filter:invert(15%) sepia(39%) saturate(5702%) hue-rotate(350deg) brightness(92%) contrast(127%);
-    filter:invert(15%) sepia(39%) saturate(5702%) hue-rotate(350deg) brightness(92%) contrast(127%)
+
+nav li:last-child {
+  background-color: #483030;
 }
-.quote-source{
-    color:#900;
-    margin-bottom:15px
+
+nav li:first-child:hover {
+  background-color: #193319;
+  cursor: pointer;
 }
-.purple{
-    color:#483030;
-    font-family:Baloo Bhai,cursive;
-    font-display: swap;
+
+nav li:nth-child(2):hover {
+  background-color: #b37522;
+  cursor: pointer;
 }
-#reviews{
-    min-height:600px
+
+nav li:nth-child(3):hover {
+  background-color: #c94343;
+  cursor: pointer;
 }
-.sammy-cover{
-    width:35%;
-    max-width:175px;
-    height:auto;
-    margin:20px auto 25px;
-    display:block;
-    -webkit-transform:rotate(-5deg);
-    transform:rotate(-5deg)
+
+nav li:last-child:hover {
+  background-color: #1f1515;
+  cursor: pointer;
 }
-.quotes{
-    margin-top:50px
+
+nav a,
+nav a:hover,
+nav a:active,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
 }
-.for-reviews{
-    -webkit-filter:invert(16%) sepia(14%) saturate(1215%) hue-rotate(314deg) brightness(103%) contrast(88%);
-    filter:invert(16%) sepia(14%) saturate(1215%) hue-rotate(314deg) brightness(103%) contrast(88%)
+
+.logo {
+  display: block;
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 140px;
 }
-.quote{
-    font-size:16px;
-    font-style:italic;
-    font-display: swap;
-    color:#353535;
-    line-height:22px;
-    margin-bottom:10px;
-    display:inline
+
+.close-icon,
+.hamburger-icon {
+  z-index: 2;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
-.cite{
-    font-size:12px;
-    font-weight:bolder;
-    color:#483030;
-    -webkit-margin-after:0;
-    margin-bottom:4px
+
+.close-icon {
+  width: 20px;
 }
+
+.hamburger-icon {
+  width: 24px;
+}
+
+main {
+  margin-top: 25px;
+}
+
+#about,
+#books,
+#home,
+#reviews {
+  width: 90%;
+  padding-top: 70px;
+  margin: -70px auto 50px;
+}
+
+#home {
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.carousel p {
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.slide {
+  border-radius: 10px;
+  width: 90%;
+  height: 500px;
+  margin: auto;
+}
+
+.grey-backdrop {
+  position: absolute;
+  bottom: 35px;
+  left: 5%;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.caption {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.caption > h3,
+.caption > p {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.green {
+  color: #306030;
+  font-family: Baloo Bhai, cursive;
+  font-display: swap;
+}
+
+.buttons {
+  width: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 35px;
+  bottom: 85px;
+}
+
+.right-arrow {
+  right: 35px;
+  bottom: 85px;
+}
+
+#about p {
+  margin-top: 25px;
+}
+
+.brown {
+  color: #604830;
+  font-family: Baloo Bhai, cursive;
+  font-display: swap;
+}
+
+.paul-and-jerry {
+  width: 300px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border: 20px solid #d89030;
+}
+
+.pink {
+  color: #812525;
+  font-family: Baloo Bhai, cursive;
+  font-display: swap;
+}
+
+.book-title {
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+h5 {
+  font-size: 0.95rem;
+}
+
+.authors {
+  font-size: 0.9rem;
+}
+
+.book-covers {
+  margin: -55px auto 15px;
+  width: 70%;
+  display: block;
+  padding-left: 45px;
+}
+
+.free-copy-link {
+  position: relative;
+  z-index: 2;
+  top: 65px;
+  left: 145px;
+}
+
+.free-copy-badge {
+  object-fit: cover;
+  max-width: 110px;
+  transform: rotate(5deg);
+}
+
+.purchase-links {
+  width: 70%;
+  margin: -30px auto 65px;
+}
+
+.isbn {
+  visibility: collapse;
+  height: 0;
+}
+
+.price {
+  position: relative;
+  top: 90px;
+}
+
+.price,
+.isbn {
+  margin: 0;
+  text-align: center;
+  display: block;
+  float: none;
+}
+
+.sammy-cover-books {
+  max-width: 200px;
+  position: relative;
+  box-shadow: 10px 10px 5px -6px rgba(221, 221, 221, 0.55);
+}
+
+.optional-break {
+  display: none;
+}
+
+.buy-now {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  width: 55%;
+  max-width: 225px;
+  font-family: Lobster, cursive;
+  font-display: swap;
+  background: #5aad5a;
+  border: 2px solid #0b6623;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+  margin: 10px auto;
+  float: none;
+}
+
+.buy-now:hover {
+  cursor: pointer;
+  background: #b5dab5;
+}
+
+.buy-now:active,
+.buy-now:hover,
+.buy-now:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.quote-snippets,
+.synopsis {
+  margin-top: 35px;
+}
+
+.quote-books {
+  line-height: 1.75;
+  display: inline;
+}
+
+.quote-marks {
+  width: 14px;
+  display: inline;
+  margin-bottom: 5px;
+}
+
+.opening {
+  margin-right: 4px;
+}
+
+.closing {
+  margin-left: 4px;
+}
+
+.for-books {
+  -webkit-filter: invert(15%) sepia(39%) saturate(5702%) hue-rotate(350deg) brightness(92%) contrast(127%);
+  filter: invert(15%) sepia(39%) saturate(5702%) hue-rotate(350deg) brightness(92%) contrast(127%);
+}
+
+.quote-source {
+  color: #900;
+  margin-bottom: 15px;
+}
+
+.purple {
+  color: #483030;
+  font-family: Baloo Bhai, cursive;
+  font-display: swap;
+}
+
+#reviews {
+  min-height: 600px;
+}
+
+.sammy-cover-reviews {
+  width: 35%;
+  max-width: 175px;
+  height: auto;
+  margin: 20px auto 25px;
+  display: block;
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  box-shadow: 10px 10px 5px -1px rgba(204, 204, 204, 1);
+}
+
+.quotes {
+  margin-top: 50px;
+}
+
+.for-reviews {
+  -webkit-filter: invert(16%) sepia(14%) saturate(1215%) hue-rotate(314deg) brightness(103%) contrast(88%);
+  filter: invert(16%) sepia(14%) saturate(1215%) hue-rotate(314deg) brightness(103%) contrast(88%);
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  font-display: swap;
+  color: #353535;
+  line-height: 22px;
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.cite {
+  font-size: 12px;
+  font-weight: bolder;
+  color: #483030;
+  -webkit-margin-after: 0;
+  margin-bottom: 4px;
+}
+
 footer {
-    background-color: #e3e1e3;
-    padding-top: 70px;
-    margin-top: 70px;
-    width: 100%;
-    min-height: 200px;
-    position: absolute;
+  background-color: #e3e1e3;
+  padding-top: 70px;
+  margin-top: 70px;
+  width: 100%;
+  min-height: 200px;
+  position: absolute;
 }
-.logo-footer{
-    width:20%;
-    display:block;
-    margin:-40px auto 0;
-    max-width:130px
+
+.logo-footer {
+  width: 20%;
+  display: block;
+  margin: -40px auto 0;
+  max-width: 130px;
 }
-.social-icons{
-    width:70%;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    margin:25px auto
+
+.social-icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 25px auto;
 }
-.social-icon{
-    margin:0 10px;
-    width:30px!important;
-    height:30px!important
+
+.social-icon {
+  margin: 0 10px;
+  width: 30px !important;
+  height: 30px !important;
 }
-.social-svg-mask{
-    fill:#000!important
+
+.social-svg-mask {
+  fill: #000 !important;
 }
-.copyright,.site-design{
-    width:46%;
-    margin-top:25px;
-    display:inline-block;
-    font-size:.85rem;
-    margin-right:2%;
-    margin-left:2%
+
+.copyright,
+.site-design {
+  width: 46%;
+  margin-top: 25px;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-right: 2%;
+  margin-left: 2%;
 }
-.copyright{
-    float:left;
-    text-align:left
+
+.copyright {
+  float: left;
+  text-align: left;
 }
-.site-design{
-    float:right;
-    text-align:right
+
+.site-design {
+  float: right;
+  text-align: right;
 }
+
 .unstyled-links {
-    color:#000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
-@media screen and (min-width:600px){
-    .book-details{
-        width:75%;
-        float:left;
-        margin-bottom:35px
-    }
-    .book-covers{
-        width:20%;
-        max-width:115px;
-        float:left;
-        margin:-65px auto 0;
-        height:auto
-    }
-    .cover{
-        width:75%;
-        margin:0 auto 15px;
-        float:none;
-        display:block
-    }
-    .buy-now{
-        display:inline-block;
-        font-size:16px;
-        width:20%;
-        padding:2.5px 8px
-    }
-    .purchase-links{
-        clear:both
-    }
-    .price{
-        float:none
-    }
-    .isbn,.price{
-        margin-right:7.5%
-    }
-    .isbn{
-        margin-left:0
-    }
-    .left{
-        margin-right:15px
-    }
-    .synopsis{
-        clear:both;
-        margin-top:25px
-    }
+
+@media (min-width: 576px) {
+  .free-copy-link {
+    left: 250px;
+    top: -250px;
+  }
+
+  .book-covers {
+    margin: 35px auto 40px;
+  }
+
+  .book-title {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  .authors {
+    font-size: 1.05rem;
+  }
 }
-@media screen and (min-width:670px){
-    nav li {
-        width: 25%;
-        height: 40px;
-        padding-top: 3px;
-        font-size: 1.25rem;
-    }
-    #about,#books,#home,#reviews{
-        width:70%;
-        max-width:600px
-    }
-    .left-arrow{
-        left:40px;
-        bottom:70px
-    }
-    .right-arrow{
-        right:40px;
-        bottom:70px
-    }
+
+@media (min-width: 768px) {
+  #about,
+  #books,
+  #home,
+  #reviews {
+    width: 80%;
+  }
+
+  .book-details {
+    width: 75%;
+    float: left;
+    margin-bottom: 35px;
+  }
+
+  .book-covers {
+    width: 20%;
+    max-width: 115px;
+    float: left;
+    margin: -155px auto 0;
+    padding-left: 0;
+  }
+
+  .free-copy-link {
+    left: 100px;
+    top: 55px;
+  }
+
+  .purchase-links {
+    float: left;
+    width: 70%;
+    margin: 0 0 30px 0;
+  }
+
+  .optional-break {
+    display: block;
+  }
+
+  .sammy-cover-books {
+    max-width: 160px;
+    position: relative;
+    box-shadow: 10px 10px 5px -6px rgba(221, 221, 221, 0.55);
+  }
+
+  .buy-now {
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    padding: 2.5px 8px;
+  }
+
+  .price,
+  .isbn {
+    margin-right: 7.5%;
+    text-align: left;
+    display: inline;
+    float: none;
+  }
+
+  .isbn {
+    visibility: visible;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .price {
+    position: relative;
+    top: 0;
+  }
+
+  .left {
+    margin-right: 15px;
+  }
+
+  .synopsis {
+    clear: both;
+    margin-top: 25px;
+  }
 }
-@media screen and (min-width:1200px){
-    .close-icon,.hamburger-icon{
-        visibility:collapse
-    }
+
+@media (min-width: 992px) {
+  nav li {
+    width: 25%;
+    height: 40px;
+    padding-top: 3px;
+    font-size: 1.25rem;
+  }
+
+  #about,
+  #books,
+  #home,
+  #reviews {
+    width: 70%;
+    max-width: 600px;
+  }
+
+  .left-arrow {
+    left: 40px;
+    bottom: 70px;
+  }
+
+  .right-arrow {
+    right: 40px;
+    bottom: 70px;
+  }
+
+  .book-covers {
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .close-icon,
+  .hamburger-icon {
+    visibility: collapse;
+  }
 }

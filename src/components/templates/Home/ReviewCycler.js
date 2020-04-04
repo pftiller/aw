@@ -1,5 +1,6 @@
 import React from 'react';
 import Modernizr from '../../../../config/modernizr.config';
+import { Picture } from 'react-responsive-picture';
 import {Reviews} from './Reviews';
 let purple;
 export class ReviewCycler extends React.Component {
@@ -36,8 +37,21 @@ export class ReviewCycler extends React.Component {
         return (
             <div id="reviews" style={styles}>
                     <h2 className="purple">Reviews</h2>
-                    <img src="./images/sammy-cover.jpg" className="sammy-cover" alt=""/>
-                        <Reviews index={this.state.index}/>
+                    < Picture
+                    alt = "Sammy's Day at the Fair - Available Now!"
+                    className="sammy-cover-reviews"
+                    sources = {
+                        [{
+                                srcSet: "/images/sammy-cover-medal.jpg",
+                            },
+                            {
+                                srcSet: "/images/sammy-cover-medal.webp",
+                                type: "image/webp"
+                            }
+                        ]
+                    }
+                    />
+                    <Reviews index={this.state.index}/>
                 </div>
         )
    }
