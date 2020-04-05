@@ -17,7 +17,7 @@ export class Books extends React.Component {
                     <p class="authors">By Jerome Tiller - Illustrated by Paul Tiller</p>
                 </div>
                 <div className="book-covers">
-                <a href="https://library.biblioboard.com/viewer/06e6cd3f-e8bb-4ccb-8018-30815fadf779" target="_blank" className="free-copy-link">
+                <a href="https://library.biblioboard.com/viewer/06e6cd3f-e8bb-4ccb-8018-30815fadf779" target="_blank" rel="noopener" className="free-copy-link">
                 < Picture
                     alt = "Free copy available"
                     className = "free-copy-badge"
@@ -65,7 +65,7 @@ export class Books extends React.Component {
                 <div className="synopsis">
                     <p><em>Sammy's Day at the Fair: The Digestive System</em> introduces middle-grade readers to the human digestive system by blending a humorous story about a boy's eating adventures at a fair with an introductory lesson in biology and anatomy. Many <a href="/#reviews">nationally-recognized science and health teachers</a> have endorsed the accuracy of the information in the book, but they also like the creative and humorous way the technical information is presented. Besides providing an introductory lesson on the digestive organs and their functions, the book also explains the technical basis behind all those digestion-related reactions that kids (and adults) find so funny. This gut-reaction feature and the humorous story-line helps make learning science fun. Finally, to assist in the campaign against childhood obesity, the book carries a healthy-living message that promotes good nutrition and exercise.</p>
                     <br/>
-                    <p><a href="https://www.storymonsters.com/book-briefs/2019-story-monsters-approved-winners-announced" target="_blank">2019 Story Monsters Ink Approved</a> in three categories: Middle Grade (Ages 8-12) Non-Fiction, Middle Grade (Ages 8-12) Fiction, and Health and Wellness and <a href="https://mipa.org/midwest-book-awards/" target="_blank">2019 Midwest Publishers Association Awards</a> : Finalist - Children’s Fiction — WINNER - Children’s Non-Fiction</p>
+                    <p><a href="https://www.storymonsters.com/book-briefs/2019-story-monsters-approved-winners-announced" target="_blank" rel="noopener">2019 Story Monsters Ink Approved</a> in three categories: Middle Grade (Ages 8-12) Non-Fiction, Middle Grade (Ages 8-12) Fiction, and Health and Wellness and <a href="https://mipa.org/midwest-book-awards/" target="_blank" rel="noopener">2019 Midwest Publishers Association Awards</a> : Finalist - Children’s Fiction — WINNER - Children’s Non-Fiction</p>
                     <div className="quote-snippets">
                         <img src='./images/svgs/start-quotes.svg' alt="Beginning Quotes" className="quote-marks opening for-books"/>
                         <p className="quote-books"><i>...Straightforward information on the digestive system at an intermediate level...deftly illustrated...as instructional and educational as it is enjoyable and reader engaging.</i></p>
