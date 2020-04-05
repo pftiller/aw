@@ -1,6 +1,5 @@
 import React from 'react';
-import Modernizr from '../../../../config/modernizr.config';
-import { Picture } from 'react-responsive-picture';
+import { isWebpSupported } from "react-image-webp/dist/utils";
 import {Reviews} from './Reviews';
 let purple;
 export class ReviewCycler extends React.Component {
@@ -24,35 +23,25 @@ export class ReviewCycler extends React.Component {
         clearInterval(this.interval);
       }
     render() {
-        if(Modernizr.webp) {
-            purple = '/images/purple.webp';
-         }
-         else {
-            purple = '/images/purple.png';
-         }
+        isWebpSupported()
+        ? (purple = "/images/purple.webp")
+        : (purple = "/images/purple.png");
         let styles = {
             background: `url(${purple}) center center / 105% 95% no-repeat`   
         }
-      
         return (
-            <div id="reviews" style={styles}>
-                    <h2 className="purple">Reviews</h2>
-                    < Picture
-                    alt = "Sammy's Day at the Fair - Available Now!"
-                    className="sammy-cover-reviews"
-                    sources = {
-                        [{
-                                srcSet: "/images/sammy-cover-medal.jpg",
-                            },
-                            {
-                                srcSet: "/images/sammy-cover-medal.webp",
-                                type: "image/webp"
-                            }
-                        ]
-                    }
-                    />
-                    <Reviews index={this.state.index}/>
-                </div>
-        )
+          <div id="reviews" style={styles}>
+            <h2 className="purple">Reviews</h2>
+            <picture>
+              <source srcset="/images/sammy-cover-medal.webp" type="image/webp" />
+              <img
+                src="/images/sammy-cover-medal.jpg"
+                className="sammy-cover-reviews"
+                alt="Sammy's Day at the Fair - Available Now!"
+              />
+            </picture>
+            <Reviews index={this.state.index} />
+          </div>
+        );
    }
 }
