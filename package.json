@@ -5,23 +5,16 @@
   "dependencies": {
     "react": "*",
     "react-dom": "*",
+    "react-image-webp": "^0.7.0",
     "react-scripts": "*",
     "react-social-icons": "*",
-    "workbox-webpack-plugin": "*"
+    "workbox-build": "*"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "devDependencies": {
-    "eslint-config-airbnb": "*",
-    "eslint-plugin-import": "^*",
-    "eslint-plugin-jsx-a11y": "*",
-    "eslint-plugin-react": "*",
-    "prop-types": "*",
-    "react-image-webp": "^0.7.0",
-    "webp-loader": "*",
-    "workbox-build": "*"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
