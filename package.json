@@ -3,26 +3,48 @@
   "version": "1.0.0",
   "homepage": "https://artwriteproductions.com",
   "dependencies": {
-    "react": "*",
-    "react-dom": "*",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-image-webp": "^0.7.0",
-    "react-scripts": "*",
-    "react-social-icons": "*",
-    "workbox-build": "*"
+    "react-social-icons": "^4.1.0",
+    "webpack": "^4.42.1",
+    "workbox-webpack-plugin": "^5.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
+    "bundle": "webpack --config webpack.config.js",
+    "prestart": "npm run bundle",
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode=production"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "style-loader": "^1.1.4",
+    "webp-loader": "^0.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  }
 }
