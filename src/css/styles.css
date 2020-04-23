@@ -103,7 +103,10 @@ nav li:last-child:hover {
   background-color: #1f1515;
   cursor: pointer;
 }
-
+nav a {
+  width: 100%;
+  display: block;
+}
 nav a,
 nav a:hover,
 nav a:active,

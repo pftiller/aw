@@ -24,7 +24,7 @@ export class Books extends React.Component {
         </div>
         <div className="book-covers">
           <a
-            href="https://library.biblioboard.com/viewer/06e6cd3f-e8bb-4ccb-8018-30815fadf779"
+            href="https://library.biblioboard.com/viewer/7e87464f-6914-4009-a0b1-132ba914338c/1"
             target="_blank"
             rel="noopener noreferrer"
             className="free-copy-link"
