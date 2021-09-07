@@ -6,7 +6,7 @@ export class Footer extends React.Component {
     return (
       <footer>
         <picture>
-          <source srcset="/images/artwrite-logo.webp" type="image/webp" />
+          <source srcSet="/images/artwrite-logo.webp" type="image/webp" />
           <img
             src="/images/artwrite-logo.png"
             className="logo-footer"

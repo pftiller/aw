@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const {GenerateSW} = require('workbox-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: __dirname,
@@ -9,11 +10,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'js/bundle.js',
-        publicPath: '/',
+        publicPath: '',
     },
     devServer: {
         historyApiFallback: true,
-        contentBase: path.join(__dirname, 'build')
+        static: path.join(__dirname, 'build')
     },
     module: {
         rules: [
@@ -51,6 +52,14 @@ module.exports = {
         }),
         new GenerateSW({
             swDest: 'sw.js'
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, './src/images'),
+                    to: path.resolve(__dirname, 'build/images')
+                }
+            ]
         })
     ],
 }

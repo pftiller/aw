@@ -33,7 +33,7 @@ export class ReviewCycler extends React.Component {
           <div id="reviews" style={styles}>
             <h2 className="purple">Reviews</h2>
             <picture>
-              <source srcset="/images/sammy-cover-medal.webp" type="image/webp" />
+              <source srcSet="/images/sammy-cover-medal.webp" type="image/webp" />
               <img
                 src="/images/sammy-cover-medal.jpg"
                 className="sammy-cover-reviews"

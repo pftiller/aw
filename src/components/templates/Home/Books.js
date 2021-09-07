@@ -20,7 +20,7 @@ export class Books extends React.Component {
           <h5>
             <i>Featuring Gut Feelings and Reactions</i>
           </h5>
-          <p class="authors">By Jerome Tiller - Illustrated by Paul Tiller</p>
+          <p className="authors">By Jerome Tiller - Illustrated by Paul Tiller</p>
         </div>
         <div className="book-covers">
           <a
@@ -30,7 +30,7 @@ export class Books extends React.Component {
             className="free-copy-link"
           >
             <picture>
-              <source srcset="/images/free-copy.webp" type="image/webp" />
+              <source srcSet="/images/free-copy.webp" type="image/webp" />
               <img
                 src="/images/free-copy.png"
                 className="free-copy-badge"
@@ -39,7 +39,7 @@ export class Books extends React.Component {
             </picture>
             </a>
             <picture>
-              <source srcset="/images/sammy-cover-medal.webp" type="image/webp" />
+              <source srcSet="/images/sammy-cover-medal.webp" type="image/webp" />
               <img
                 src="/images/sammy-cover-medal.jpg"
                 className="sammy-cover-books"

@@ -54,7 +54,7 @@ export class HeaderContents extends React.Component {
       return (
         <div>
           <picture>
-            <source srcset="/images/artwrite-logo.webp" type="image/webp" />
+            <source srcSet="/images/artwrite-logo.webp" type="image/webp" />
             <img
               src="/images/artwrite-logo.png"
               className="logo"
@@ -74,7 +74,7 @@ export class HeaderContents extends React.Component {
       return (
         <div>
           <picture>
-            <source srcset="/images/artwrite-logo.webp" type="image/webp" />
+            <source srcSet="/images/artwrite-logo.webp" type="image/webp" />
             <img
               src="/images/artwrite-logo.png"
               className="logo"
@@ -94,7 +94,7 @@ export class HeaderContents extends React.Component {
       return (
         <div>
           <picture>
-            <source srcset="/images/artwrite-logo.webp" type="image/webp" />
+            <source srcSet="/images/artwrite-logo.webp" type="image/webp" />
             <img
               src="/images/artwrite-logo.png"
               className="logo"

@@ -1,5 +1,6 @@
 # [START app_yaml]
-runtime: nodejs10
+runtime: nodejs12
+env: standard
 default_expiration: "10d"
 handlers:
   - url: /static

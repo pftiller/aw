@@ -13,7 +13,7 @@ export class About extends React.Component {
       <div id="about" style={styles}>
         <h2 className="brown">About ArtWrite Productions</h2>
         <picture>
-          <source srcset="/images/paul-and-jerry.webp" type="image/webp" />
+          <source srcSet="/images/paul-and-jerry.webp" type="image/webp" />
           <img
             src="/images/paul-and-jerry.jpg"
             className="paul-and-jerry"
