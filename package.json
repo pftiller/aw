@@ -1,7 +1,7 @@
 {
   "name": "artwrite",
   "version": "1.0.0",
-  "homepage": "https://artwriteproductions.com",
+  "homepage": "./", 
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "express": "^4.17.3",
@@ -13,13 +13,13 @@
     "webpack": "^5.69.1"
   },
   "resolutions": {
-    "trim-newlines": "^4.0.1",
-    "semver-regex": "^4.0.2"
+    "trim-newlines": "4.0.1",
+    "semver-regex": "4.0.2"
   },
 
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "start": "node --inpect server.js",
+    "start": "node server.js",
     "bundle": "webpack --config webpack.config.js --mode=production",
     "prestart": "npm run bundle --mode=production",
     "build": "webpack --mode=production"
