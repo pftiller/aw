@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import firebase from "./utils/firebase";
 import { HeaderContents } from "./Header";
 import { Carousel } from "./Carousel";
 import { About } from "./About";
