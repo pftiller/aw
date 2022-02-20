@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "express": "^4.17.1",
+    "firebase": "^9.6.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-image-webp": "^0.7.0",
