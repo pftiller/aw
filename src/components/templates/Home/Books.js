@@ -1,17 +1,9 @@
 import React from "react";
-import { isWebpSupported } from "react-image-webp/dist/utils";
-let pink;
 
 export class Books extends React.Component {
   render() {
-    isWebpSupported()
-      ? (pink = "/images/pink.webp")
-      : (pink = "/images/pink.png");
-    let styles = {
-      background: `url(${pink}) center center / 100% 98% no-repeat`,
-    };
     return (
-      <div id="books" style={styles}>
+      <div id="books">
         <h2 className="pink">Our Books</h2>
         <div className="book-details">
           <h4 className="book-title">

@@ -1,7 +1,6 @@
 import React from 'react';
-import { isWebpSupported } from "react-image-webp/dist/utils";
 import {Reviews} from './Reviews';
-let purple;
+
 export class ReviewCycler extends React.Component {
     constructor(props) {
         super(props);
@@ -9,7 +8,9 @@ export class ReviewCycler extends React.Component {
     }
     componentDidMount() {
         this.interval = setInterval(()=> {
-            let index = this.state.index;
+            let {
+                index
+            } = this.state;
             if(index === 7) {
                 this.setState({index: 0})
             }
@@ -23,14 +24,8 @@ export class ReviewCycler extends React.Component {
         clearInterval(this.interval);
       }
     render() {
-        isWebpSupported()
-        ? (purple = "/images/purple.webp")
-        : (purple = "/images/purple.png");
-        let styles = {
-            background: `url(${purple}) center center / 105% 95% no-repeat`   
-        }
         return (
-          <div id="reviews" style={styles}>
+          <div id="reviews">
             <h2 className="purple">Reviews</h2>
             <picture>
               <source srcSet="/images/sammy-cover-medal.webp" type="image/webp" />

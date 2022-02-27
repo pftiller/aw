@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "./Nav";
-const hamburgerStates = require("../../../js/hamburger-states");
+import hamburgerStates from '../../../js/hamburger-states.js';
 export class HeaderContents extends React.Component {
   constructor(props) {
     super(props);
@@ -14,11 +14,6 @@ export class HeaderContents extends React.Component {
         return {
           width: props.width,
           condition: "closed",
-        };
-      } else if (props.condition === "open" && props.width < 1200) {
-        return {
-          width: props.width,
-          condition: "open",
         };
       } else {
         return {

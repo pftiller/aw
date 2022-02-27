@@ -1,16 +1,8 @@
 import React from "react";
-import { isWebpSupported } from "react-image-webp/dist/utils";
-let orange;
 export class About extends React.Component {
   render() {
-    isWebpSupported()
-      ? (orange = "/images/orange.webp")
-      : (orange = "/images/orange.png");
-    let styles = {
-      background: `url(${orange}) center center / 100% 97.5% no-repeat`,
-    };
     return (
-      <div id="about" style={styles}>
+      <div id="about">
         <h2 className="brown">About ArtWrite Productions</h2>
         <picture>
           <source srcSet="/images/paul-and-jerry.webp" type="image/webp" />

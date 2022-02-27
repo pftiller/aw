@@ -11,7 +11,7 @@
         alt: "Close Icon"
       }
 
- module.exports = {
-    open: open,
-    closed: closed
- }
+   export default {
+      open: open,
+      closed: closed
+   };

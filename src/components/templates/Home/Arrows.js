@@ -1,5 +1,4 @@
 import React from "react";
-import { isWebpSupported } from "react-image-webp/dist/utils";
 import { images } from "../../../js/carousel-images";
 
 export class Arrows extends React.Component {
@@ -27,7 +26,9 @@ export class Arrows extends React.Component {
   }
 
   handleClick(e) {
-    let className = e.target.className;
+    let {
+      className
+    } = e.target;
     if (className === "left-arrow") {
       this.back();
     } else {
@@ -36,9 +37,11 @@ export class Arrows extends React.Component {
   }
   back() {
     clearInterval(this.timer);
-    let index = this.state.index;
+    let {
+      index
+    } = this.state;
     if (index > 0) {
-      index -= 1;
+      --index;
       this.setState({
         index: index,
       });
@@ -53,9 +56,11 @@ export class Arrows extends React.Component {
   }
   forward() {
     clearInterval(this.timer);
-    let index = this.state.index;
+    let {
+      index
+    } = this.state;
     if (index < 2) {
-      index += 1;
+      ++index;
       this.setState({
         index: index,
       });
@@ -72,7 +77,6 @@ export class Arrows extends React.Component {
     clearInterval(this.timer);
   }
   render() {
-    if (isWebpSupported()) {
       return (
         <div className="buttons">
           <img
@@ -97,34 +101,5 @@ export class Arrows extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return (
-        <div className="buttons">
-          <img
-            src="./images/svgs/left-chevron.svg"
-            alt="Left Chevron"
-            className="left-arrow"
-            onClick={(e) => this.handleClick(e)}
-          />
-          <img
-            src="./images/svgs/right-chevron.svg"
-            alt="Right Chevron"
-            className="right-arrow"
-            onClick={(e) => this.handleClick(e)}
-          />
-          <div
-            className="slide"
-            style={images[this.state.index].fallbackStyles}
-          >
-            <div className="grey-backdrop">
-              <div className="caption">
-                <h3>{images[this.state.index].header}</h3>
-                <p>{images[this.state.index].caption}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    }
   }
 }

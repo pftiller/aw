@@ -1,94 +1,218 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel='preconnect' href='//fonts.googleapis.com' />
-  <link rel='preconnect' href='//www.googletagmanager.com' />
-  <link rel='preconnect' href='//www.google-analytics.com' />
-  <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-  <link rel='dns-prefetch' href='//www.googletagmanager.com' />
-  <link rel='dns-prefetch' href='//www.google-analytics.com' />
-  <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
-  <meta name="theme-color" content="#e3e1e3" />
-  <meta name="google-site-verification" content="ORvR-pNXFUg0J07kvJDNZvxtsoymED52IlgYXc6dY7s" />
-  <meta property="og:title" content="ArtWrite Productions">
-  <meta property="og:site_name" content="ArtWrite Productions">
-  <meta property="og:url" content="https://artwriteproductions.com">
-  <meta property="og:description" content="ArtWrite Productions is a family-owned publishing company intent on making education and reading more pleasurable for youth.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://artwriteproductions.com/images/artwrite-a.png">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M3TXTPX');</script>
-  <!-- End Google Tag Manager -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-       "@context":"https://schema.org",
-       "@type":"Organization",
-       "name":"ArtWrite Productions",
-       "legalName":"ArtWrite Productions",
-       "url":"https://artwriteproductions.com",
-       "logo":"https://artwriteproductions.com/images/artwrite-logo.png",
-       "foundingDate":"2003",
-       "founders":[
-          {
-             "@type":"Person",
-             "name":"Jerome Tiller"
-          },
-          {
-             "@type":"Person",
-             "name":"Paul Tiller"
-          }
-       ],
-       "address":{
-          "@type":"PostalAddress",
-          "streetAddress":"1555 Gardena Ave NE",
-          "addressLocality":"Minneapolis",
-          "addressRegion":"MN",
-          "postalCode":"55432",
-          "addressCountry":"USA"
-       },
-       "sameAs":[
-          "https://www.facebook.com/artwriteproductions",
-          "https://www.youtube.com/channel/UC6o8IqLRgzen5uyGt8NP_Yw",
-          "https://www.linkedin.com/company/9729956",
-          "https://artwriteproductions.com"
-       ]
-    }
-    </script>
-  <!-- End Structured Data -->
-  <title>Youth Books - Fun & Informative | ArtWrite Productions</title>
-  <meta name="description"
-    content="ArtWrite Productions is an independent publisher that aims to make education and reading more fun for youth." />
-</head>
-
-<body>
-  <noscript id="deferred-styles">
-    <style class="_styletron_hydrate_"></style>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3TXTPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  </noscript>
-  <div id="root"></div>
-
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
-</body>
-
+   <head>
+      <meta charset="utf-8" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="//fonts.googleapis.com" />
+      <link rel="preconnect" href="//www.googletagmanager.com" />
+      <link rel="preconnect" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
+      <meta name="theme-color" content="#e3e1e3" />
+      <meta name="google-site-verification" content="ORvR-pNXFUg0J07kvJDNZvxtsoymED52IlgYXc6dY7s" />
+      <meta property="og:title" content="ArtWrite Productions" />
+      <meta property="og:site_name" content="ArtWrite Productions" />
+      <meta property="og:url" content="https://artwriteproductions.com" />
+      <meta property="og:description" content="ArtWrite Productions is a family-owned publishing company intent on making education and reading more pleasurable for youth." />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://artwriteproductions.com/images/artwrite-a.png" />
+      <!-- Google Tag Manager -->
+      <script>
+         (function (w, d, s, l, i) {
+             w[l] = w[l] || [];
+             w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+             var f = d.getElementsByTagName(s)[0],
+                 j = d.createElement(s),
+                 dl = l != "dataLayer" ? "&l=" + l : "";
+             j.async = true;
+             j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+             f.parentNode.insertBefore(j, f);
+         })(window, document, "script", "dataLayer", "GTM-M3TXTPX");
+      </script>
+      <!-- End Google Tag Manager -->
+      <link rel="icon" href="favicon.ico" type="image/ico">
+      <!-- Structured Data -->
+      <script type="application/ld+json">
+         {
+             "@context": "https://schema.org",
+             "@type": "Organization",
+             "name": "ArtWrite Productions",
+             "legalName": "ArtWrite Productions",
+             "url": "https://artwriteproductions.com",
+             "logo": "https://artwriteproductions.com/images/artwrite-logo.png",
+             "foundingDate": "2003",
+             "founders": [
+                 {
+                     "@type": "Person",
+                     "name": "Jerome Tiller"
+                 },
+                 {
+                     "@type": "Person",
+                     "name": "Paul Tiller"
+                 }
+             ],
+             "address": {
+                 "@type": "PostalAddress",
+                 "streetAddress": "1555 Gardena Ave NE",
+                 "addressLocality": "Minneapolis",
+                 "addressRegion": "MN",
+                 "postalCode": "55432",
+                 "addressCountry": "USA"
+             },
+             "sameAs": ["https://www.facebook.com/artwriteproductions", "https://www.youtube.com/channel/UC6o8IqLRgzen5uyGt8NP_Yw", "https://www.linkedin.com/company/9729956", "https://artwriteproductions.com"]
+         }
+      </script>
+      <script>
+         !(function (e, n, A) {
+             function o(e, n) {
+                 return typeof e === n;
+             }
+             function t() {
+                 var e, n, A, t, a, i, r;
+                 for (var f in l)
+                     if (l.hasOwnProperty(f)) {
+                         if (((e = []), (n = l[f]), n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)))
+                             for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
+                         for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)
+                             (i = e[a]),
+                                 (r = i.split(".")),
+                                 1 === r.length ? (Modernizr[r[0]] = t) : (!Modernizr[r[0]] || Modernizr[r[0]] instanceof Boolean || (Modernizr[r[0]] = new Boolean(Modernizr[r[0]])), (Modernizr[r[0]][r[1]] = t)),
+                                 s.push((t ? "" : "no-") + r.join("-"));
+                     }
+             }
+             function a(e) {
+                 var n = r.className,
+                     A = Modernizr._config.classPrefix || "";
+                 if ((c && (n = n.baseVal), Modernizr._config.enableJSClass)) {
+                     var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)");
+                     n = n.replace(o, "$1" + A + "js$2");
+                 }
+                 Modernizr._config.enableClasses && ((n += " " + A + e.join(" " + A)), c ? (r.className.baseVal = n) : (r.className = n));
+             }
+             function i(e, n) {
+                 if ("object" == typeof e) for (var A in e) u(e, A) && i(A, e[A]);
+                 else {
+                     e = e.toLowerCase();
+                     var o = e.split("."),
+                         t = Modernizr[o[0]];
+                     if ((2 == o.length && (t = t[o[1]]), "undefined" != typeof t)) return Modernizr;
+                     (n = "function" == typeof n ? n() : n),
+                         1 == o.length ? (Modernizr[o[0]] = n) : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), (Modernizr[o[0]][o[1]] = n)),
+                         a([(n && 0 != n ? "" : "no-") + o.join("-")]),
+                         Modernizr._trigger(e, n);
+                 }
+                 return Modernizr;
+             }
+             var s = [],
+                 r = n.documentElement,
+                 l = [],
+                 f = {
+                     _version: "3.6.0",
+                     _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 },
+                     _q: [],
+                     on: function (e, n) {
+                         var A = this;
+                         setTimeout(function () {
+                             n(A[e]);
+                         }, 0);
+                     },
+                     addTest: function (e, n, A) {
+                         l.push({ name: e, fn: n, options: A });
+                     },
+                     addAsyncTest: function (e) {
+                         l.push({ name: null, fn: e });
+                     },
+                 },
+                 Modernizr = function () {};
+             (Modernizr.prototype = f), (Modernizr = new Modernizr());
+             var u,
+                 c = "svg" === r.nodeName.toLowerCase();
+             !(function () {
+                 var e = {}.hasOwnProperty;
+                 u =
+                     o(e, "undefined") || o(e.call, "undefined")
+                         ? function (e, n) {
+                               return n in e && o(e.constructor.prototype[n], "undefined");
+                           }
+                         : function (n, A) {
+                               return e.call(n, A);
+                           };
+             })(),
+                 (f._l = {}),
+                 (f.on = function (e, n) {
+                     this._l[e] || (this._l[e] = []),
+                         this._l[e].push(n),
+                         Modernizr.hasOwnProperty(e) &&
+                             setTimeout(function () {
+                                 Modernizr._trigger(e, Modernizr[e]);
+                             }, 0);
+                 }),
+                 (f._trigger = function (e, n) {
+                     if (this._l[e]) {
+                         var A = this._l[e];
+                         setTimeout(function () {
+                             var e, o;
+                             for (e = 0; e < A.length; e++) (o = A[e])(n);
+                         }, 0),
+                             delete this._l[e];
+                     }
+                 }),
+                 Modernizr._q.push(function () {
+                     f.addTest = i;
+                 }),
+                 Modernizr.addAsyncTest(function () {
+                     function e(e, n, A) {
+                         function o(n) {
+                             var o = n && "load" === n.type ? 1 == t.width : !1,
+                                 a = "webp" === e;
+                             i(e, a && o ? new Boolean(o) : o), A && A(n);
+                         }
+                         var t = new Image();
+                         (t.onerror = o), (t.onload = o), (t.src = n);
+                     }
+                     var n = [
+                             { uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" },
+                             { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" },
+                             { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" },
+                             { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" },
+                         ],
+                         A = n.shift();
+                     e(A.name, A.uri, function (A) {
+                         if (A && "load" === A.type) for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri);
+                     });
+                 }),
+                 t(),
+                 a(s),
+                 delete f.addTest,
+                 delete f.addAsyncTest;
+             for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
+             e.Modernizr = Modernizr;
+         })(window, document);
+      </script>
+      <!-- End Structured Data -->
+      <title>Youth Books - Fun & Informative | ArtWrite Productions</title>
+      <meta name="description" content="ArtWrite Productions is an independent publisher that aims to make education and reading more fun for youth." />
+   </head>
+   <body>
+      <noscript id="deferred-styles">
+         <style class="_styletron_hydrate_"></style>
+         <!-- Google Tag Manager (noscript) -->
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3TXTPX" height="0" width="0" style="display: none; visibility: hidden;"></iframe></noscript>
+         <!-- End Google Tag Manager (noscript) -->
+      </noscript>
+      <div id="root"></div>
+      <!--
+         This HTML file is a template.
+         If you open it directly in the browser, you will see an empty page.
+         
+         You can add webfonts, meta tags, or analytics to this file.
+         The build step will place the bundled scripts into the <body> tag.
+         
+         To begin the development, run `npm start` or `yarn start`.
+         To create a production bundle, use `npm run build` or `yarn build`.
+         -->
+   </body>
 </html>
